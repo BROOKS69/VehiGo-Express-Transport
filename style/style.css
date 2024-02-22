@@ -657,6 +657,11 @@ body {
 	border-radius: 8px;
 }
 
+.booking-button-content a{
+	text-decoration: none;
+	color: whitesmoke;
+}
+
 .bottom-footera {
 	margin-left: 33px;
 	margin: 20px 15px 20px 0px;
@@ -718,12 +723,12 @@ body {
 }
 
 .booking_a-content-bg {
-	background-image: url(../assess/body__img-removebg-preview.png);
+	background-image: url(../assess/bus2.jpeg);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 389px;
-	width: 360px;
+	height: 400px;
+	width: 400px;
 }
 
 .booking_a-content-text {
@@ -800,6 +805,10 @@ body {
 	line-height: 32px;
 	letter-spacing: -0.01em;
 	border-radius: 8px;
+}
+
+.booking_a-button a{
+	text-decoration: none;
 }
 
 .button-book {
@@ -889,6 +898,11 @@ body {
 	text-align: center;
 	border: none;
 	border-radius: 8px;
+}
+
+.booking_b-button a {
+	text-decoration: none;
+	color: whitesmoke;
 }
 
 /*booking_c page*/
