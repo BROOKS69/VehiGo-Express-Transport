@@ -1,0 +1,1345 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat';
+}
+
+body {
+	box-sizing: border-box;
+	height: 100vh;
+}
+
+.container {
+    background-image: url(../assess/background.png);
+    background-size: cover;
+    background-position: center;
+	height: 100vh;
+}
+
+.ttms_containers {
+    /*background-color: aquamarine;*/
+    width: 100%;
+    max-width: 1332px;
+    margin: 0px auto;
+}
+
+
+.ttms_header {
+    padding-top: 20px;
+}
+
+.testing {
+    background-color: #8D006E;
+	display: flex;
+	justify-content: space-between;
+}
+
+.ttms_header_content {
+	margin-left: 10px;
+    display: flex;
+}
+
+
+.ttms_header_logo {
+    margin: 12px 0px 12px 0px;
+}
+
+.ttms_header_divider {
+    margin: 29px 0px 29px 0px;
+}
+
+.ttms_header_divider img {
+    height: 71px;
+}
+
+.ttms_header_text{
+    margin: 20px 0px 20px 13px;
+	color: white;
+	font-size: 11px;
+    font-size: 14px;
+	font-family: 'Montserrat';
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+
+.ttms-logo-ride {
+    font-size: 32px;
+	font-family: 'Montserrat';
+    line-height: 39px;
+    letter-spacing: 0em;
+}
+
+.ttms_header_text a {
+	color: white;
+    text-decoration: none;
+}
+
+.ttms_header_nav {
+	width: 527px;
+}
+
+.ttms_header_nav ul {
+	margin: 35px 0px 35px 0px;
+	padding-right: 10px;
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	font-size: 16px;
+	font-family: 'Montserrat';
+	font-weight: 400;
+	line-height: 45px;
+	letter-spacing: 0px;
+}
+
+.ttms_header_nav a {
+	text-decoration: none;
+	color: #FFFFFFCC;
+
+}
+
+.login_nav_link {
+	padding: 9px 51px;
+	border: 1px solid #FF57D9;
+	border-radius: 64px;
+	font-weight: 500;
+}
+
+.login_nav_link:hover {
+	background-color: rgb(241, 58, 217);
+}
+
+.dropbtn {
+	background-color: transparent;
+	color: #FFFFFFCC;
+	font-size: 16px;
+	font-family: 'Montserrat';
+	font-weight: 400;
+	line-height: 39px;
+	letter-spacing: 0em;
+	border: none;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: rgba(255, 87, 217, 1);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: white;
+	padding: 5px 14px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #8D006E;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+.ttms_body{
+	background-color: rgba(255, 255, 255, 0.8);
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0px 5px 15px 7px #8D006E3D;
+}
+
+.ttms_body_text {
+	width: 693px;
+	margin: 55px 0px 55px 20px;
+	font-family: 'Montserrat';
+	font-size: 100px;
+	font-weight: 400;
+	line-height: 115px;
+	letter-spacing: 0em;
+}
+.ttms_body span {
+	color:#8D006E;
+}
+
+.ttms_body_img{
+	background-color:transparent;
+	margin-right: 100px;
+	background-image: url(../assess/bus2-removebg-preview.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	width: 850px;
+}
+
+
+
+/*about us*/
+.container_a {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.346), #0000007a), url(../assess/road.avif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.testing_a {
+	background-color: #8D006E;
+	display: flex;
+}
+
+.ttms_header_about {
+	margin: 39px 0px 32px 303px;
+	font-family: 'Montserrat';
+	font-size: 32px;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 39px;
+	letter-spacing: 0em;
+}
+
+.ttms_header_about span {
+	color: #FF80E3;
+
+}
+
+.aboutus_text {
+	display: flex;
+	margin: 0px 0px 41px 33px;
+	font-family: 'Montserrat';
+	font-size: 16px;
+	font-weight: 400;
+	color:#FFFFFF;
+	line-height: 29px;
+	letter-spacing: 0em;
+}
+
+.firstbox {
+	margin-top: 66px;
+}
+
+.aboutus_content_a {
+	width: 400px;
+}
+
+
+.secondbox {
+	margin-left: 61.87px;
+}
+
+.about_text_header {
+	color: rgba(255, 87, 217, 1);
+}
+
+.footer-about {
+	background-color: rgba(141, 0, 110, 1);
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px -4px 4px 2px rgba(38, 38, 38, 0.25);
+}
+
+.bottom-footer {
+	margin-left: 33px;
+	/*padding: 30px 25px 30px 0px;*/
+	font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 39px;
+	letter-spacing: 0em;
+}
+
+.footer-icon {
+	/*margin-top: 10px;
+	padding: 30px 25px 30px 0px;*/
+	margin-right: 33px;
+	display: flex
+}
+
+.social-icon {
+	margin-right: 15px;
+	
+}
+
+/*Login Page*/
+.container_b {
+	display: flex;
+}
+
+.rtm_tricyle {
+	background-color: rgba(141, 0, 110, 1);
+	flex-basis: 50%;
+}
+
+.rtm_tricyle_bg {
+	background-image: url(../assess/bus2-removebg-preview.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 700px;
+	height: 490px;
+	
+}
+
+.RTMSlogin {
+	flex-basis: 50%;
+	width: 100%;
+	max-width: 555px;
+	margin: 0px auto;
+}
+
+.login_text p {
+	margin-bottom: 0px;
+	padding-top: 30px;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 40px;
+	letter-spacing: 0em;
+	background: -webkit-linear-gradient(90deg, #7D0362 13.44%, #FF03C8 129.03%);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+
+}
+
+.login_text img {
+	padding: 0px;
+	width: 90px;
+}
+
+.login_text_paragraph {
+	padding-top: 70px;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 30px;
+	color: rgba(141, 0, 110, 0.67);
+	letter-spacing: 0em;
+}
+
+.form_input {
+	padding-top: 70px;
+	
+}
+
+.form_input input {
+	width: 555px;
+	margin-bottom: 36px;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 29px;
+	letter-spacing: 0em;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 3px solid rgba(103, 59, 153, 1);
+}
+
+.form_input button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	padding: 8px 230px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 35px;
+	color: rgba(255, 255, 255, 1);
+	letter-spacing: 0em;
+	border: none;
+	border-radius: 5px;
+}
+
+.form_input a{
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.rtmslogin_footer_or {
+	margin-top: 24px;
+	display: flex;
+	align-items: center;
+}
+
+.rtmslogin_footer_or_hr {
+	width: 213px;
+	border-top: 2px solid rgba(231, 49, 197, 1);
+}
+
+.rtmslogin_footer_or_text {
+	padding: 0px 60px 0px 60px;
+}
+
+.rtmslogin_footer_icons {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.rtmslogin-icon-border {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 37.71484375px;
+	width: 40px;
+	border: 2px solid rgba(103, 59, 153, 1);
+	border-radius: 100%;
+}
+
+.icon-border-space {
+	margin: 0px 50px;
+}
+
+.shape {
+	margin-left: 60px;
+	width: 400px;
+	height: 400px;
+	border: 2px solid black;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+/*sign up */
+.container_c {
+	background-color: #8D006E;
+	height: 100vh;
+}
+
+.rtmreg_container{
+	height: 472px;
+	display: flex;
+}
+
+.rtmreg-section-a {
+	margin: 0px 0px 0px 70px;
+	align-self: center;
+	text-align: center;
+}
+
+.rtmreg_texta {
+	margin-top: 24px;
+	margin-bottom: 22px;
+	font-size: 32px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 39px;
+	letter-spacing: -0.01em;
+}
+
+.rtmreg_textb {
+	width: 254px;
+	height: 48px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 25px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.rtmreg-section-a button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	margin-top: 26px;
+	padding: 11px 85px;
+	font-size: 20px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 29px;
+	letter-spacing: -0.01em;
+	border: none;
+	border-radius: 8px;
+}
+
+.rtmreg-section-a a{
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.rtmreg-section-b {
+	margin-left: 90px;
+	text-align: center;
+}
+
+.rtmreg-section-form{
+	background-image: url(../assess/Rectangle\ 3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 812.08px;
+	height: 457px;
+}
+
+.rtmreg-section-b input{
+	background-color: transparent;
+	width: 575px;
+	padding: 18px 0px;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+	color: #ACACAC;
+	border-bottom:1px solid grey;
+    border-top: none;
+	border-left: none;
+	border-right:none;
+    text-align: center;
+}
+
+
+
+.rtmreg-section-b button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	margin-top: 30px;
+	padding: 7px 242px;
+	font-size: 22px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 39px;
+	letter-spacing: -0.01em;
+	text-align: center;
+	border: none;
+	border-radius: 8px;
+}
+
+.rtmreg_link{
+	margin-top: 5px;
+	font-size: 20px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+
+}
+
+.rtmreg_link a {
+	font-weight: 700;
+	line-height: 20px;	
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+/*registration page*/
+.ttms-registration {
+	margin-top: 70px;
+	text-align: center;
+}
+
+.ttms-registration img {
+	height: 160px;
+	width: 160px;
+	margin-bottom: 30px;
+}
+
+.ttms-registration-text {
+	font-size: 36px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 44px;
+}
+
+.ttms-registration button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	margin-top: 40px;
+	padding: 11px 85px;
+	font-size: 20px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 29px;
+	letter-spacing: -0.01em;
+	border: none;
+	border-radius: 8px;
+}
+
+/*booking page*/
+.rtms-booking {
+	width: 100%;
+	max-width: 1116px;
+	margin: 0px auto;
+}
+
+.booking_header-text {
+	margin-bottom: 10px;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 39px;
+	color: rgba(255, 255, 255, 1);
+	letter-spacing: -0.01em;
+	text-align: center;
+}
+
+.booking_body-section {
+	background-color: rgba(255, 255, 255, 1);
+	width: 1116px;
+}
+
+.bookingbody_content {
+	margin-top: 20px;
+}
+
+.booking-body_header {
+	background: linear-gradient(180deg, #B10AA7 0%, #E731C5 114.15%);
+	padding: 20px 0px;
+	text-align: center;
+	font-size: 20;
+	color: rgba(255, 255, 255, 1);
+	font-weight: 600;
+	line-height: 29px;
+	letter-spacing: -0.01em;
+}
+
+.text-booking-content {
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 20px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: -0.01em;
+}
+
+.flex-booking-content {
+	display: flex;
+	margin-left: 100px;
+}
+
+.flex-booking-margin {
+	margin-top: 10px;
+	padding-bottom: 22px;
+}
+
+.select-booking-content select {
+	height: 56px;
+	width: 277px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 15px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: -0.01em;
+	border: 1px solid #8D006E;
+}
+
+.input-booking-content input {
+	height: 53px;
+	width: 274px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 15px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: -0.01em;
+	border: 1px solid #8D006E;
+}
+
+.select-booking-space {
+	margin: 0px 37px;
+}
+
+.booking-button-content {
+	text-align: center;
+}
+
+.booking-button-content {
+	padding-bottom: 13px;
+}
+
+.booking-button-content button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	padding: 15px 359px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 29px;
+	letter-spacing: -0.01em;
+	border: none;
+	border-radius: 8px;
+}
+
+.bottom-footera {
+	margin-left: 33px;
+	margin: 20px 15px 20px 0px;
+	font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 39px;
+	letter-spacing: 0em;
+}
+
+.footer-booking {
+	background-color: rgba(141, 0, 110, 1);
+	margin-top: 40px;
+	height: 58px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px -4px 4px 2px rgba(38, 38, 38, 0.25);
+}
+
+.bottom-footera {
+	margin-left: 33px;
+	/*padding: 30px 25px 30px 0px;*/
+	font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 39px;
+	letter-spacing: 0em;
+}
+
+.footer-icona {
+	/*margin-top: 10px;
+	padding: 30px 25px 30px 0px;*/
+	margin-right: 33px;
+	display: flex
+}
+
+.error_header-text {
+	background: rgba(255, 255, 255, 1);
+	margin-bottom: 18px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 29px;
+	letter-spacing: -0.01em;
+	text-align: center;
+}
+
+/*Booking_a page*/
+.booking_a-content {
+	background-color: rgba(255, 255, 255, 1);
+	width: 100%;
+	max-width: 1239px;
+	margin: 0px auto;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.booking_a-content-bg {
+	background-image: url(../assess/body__img-removebg-preview.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 389px;
+	width: 360px;
+}
+
+.booking_a-content-text {
+	background-color: rgba(255, 255, 255, 1);
+	text-align: center;
+}
+
+.booking_a-content-text-info {
+	background: linear-gradient(180deg, #B10AA7 -14.93%, #CA1CB5 13.65%, #E731C5 81.34%);
+	margin-top: 10px;
+	padding: 10px 0px;
+	font-size: 24px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 32px;
+	letter-spacing: -0.01em;
+}
+
+.booking_a-content-text-infoa {
+	margin-top: 4px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 133.4%;
+	letter-spacing: -0.01em;
+	color: #8D006E;
+}
+
+.booking_a-content-group {
+	margin: 15px 0px;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 21px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: 0.01em;
+}
+
+.booking_a-ticket-content {
+	width: 234px;
+	margin: auto;
+	color: rgba(141, 0, 110, 1);
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: -0.01em;
+	text-align: center;
+}
+
+.booking_a-ticket-content-border {
+	width: 234px;
+	padding: 11px 0px;
+	border: 2px solid rgba(141, 0, 110, 1);
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: none;
+	border-right-style: none;
+}
+
+.content-border-space {
+	margin: 5px 0px 15px 0px;
+}
+
+.booking_a-buttons {
+	padding-bottom: 14px;
+}
+
+.booking_a-button {
+	padding: 10px 24px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: -0.01em;
+	border-radius: 8px;
+}
+
+.button-book {
+	background: linear-gradient(90.66deg, #683B9A 4.38%, #E731C5 97.58%);
+	margin-right: 5px;
+	color: rgba(255, 255, 255, 1);
+	border: none;
+}
+
+.button-cancel {
+	background-color: transparent;
+	margin-left: 5px;
+	color: rgba(141, 0, 110, 1);
+	border: 1px solid #8D006E;
+}
+
+/*booking_b page*/
+.booking_b-content {
+	background-color: rgba(255, 255, 255, 1);
+	width: 100%;
+	max-width: 1239px;
+	margin: 0px auto;
+	border-radius: 10px;
+}
+
+.booking_b-content-fl {
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.booking_b-content-flex {
+	text-align: center;
+}
+
+.booking_b-content-text {
+	background: linear-gradient(180deg, #B10AA7 -14.93%, #CA1CB5 13.65%, #E731C5 81.34%);
+	width: 517px;
+	padding: 8px 0px;
+	font-size: 18px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 32px;
+	letter-spacing: -0.01em;
+}
+
+.booking_b-content-flex input {
+	width: 517px;
+	padding: 15px 0px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 29px;
+	letter-spacing: 0em;
+	text-align: center;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 0.5px solid #673B99;
+}
+
+.booking_b-divider {
+	background-color: #673B99;
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.booking_b-divider img{
+	height: 300px;
+}
+
+.booking_b-button {
+	padding: 16px 0px;
+	text-align: center;
+}
+
+.booking_b-button button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	padding: 7px 312px;
+	font-size: 19px;
+	font-weight: 500;
+	line-height: 29px;
+	color: rgba(255, 255, 255, 1);
+	letter-spacing: -0.01em;
+	text-align: center;
+	border: none;
+	border-radius: 8px;
+}
+
+/*booking_c page*/
+.booking_c {
+	background-color: rgba(255, 255, 255, 1);
+	width: 552px;
+	margin: auto;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.booking_c-text {
+	padding-top: 80px;
+	font-family: Montserrat;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 39px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: -0.01em;
+}
+
+.booking_c-text span {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 39px;
+	letter-spacing: -0.01em;
+}
+
+.booking_c-textb {
+	padding-top: 32px;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 39px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: -0.01em;
+}
+
+.booking_c-button  {
+	padding-top: 32px;
+}
+
+.booking_c-button button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	padding: 7px 191px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 39px;
+	letter-spacing: -0.01em;
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 8px;
+}
+
+.booking_c_logo {
+	padding: 23px 0px;
+}
+
+.booking_c_logo img {
+	height: 30px;
+	width: 163px;
+}
+
+/*booking_d page*/
+.container_d {
+	background-color: rgba(141, 0, 110, 1);
+}
+
+.ttms_header_contenta {
+	width: 188px;
+	margin: auto;
+	padding: 10px 10px;
+	display: flex;
+	text-align: center;
+}
+
+.ttms_header_logoa img{
+    height: 46px;
+	width: 116px;
+}
+
+.ttms_header_dividera {
+	margin: 0px 4px;
+}
+
+.ttms_header_dividera img {
+    height: 39px;
+}
+
+.ttms_header_text-a {
+	font-size: 8px;
+	font-weight: 400;
+	line-height: 10px;
+	letter-spacing: 0em;
+	text-align: left;
+
+}
+
+.ttms_header_text-a span {
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 12px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.ttms_header_text-a a  {
+	text-decoration: none;
+	color: rgba(141, 0, 110, 1);
+}
+
+.booking_d-content-text {
+	background: linear-gradient(180deg, #B10AA7 -14.93%, #CA1CB5 13.65%, #E731C5 81.34%);
+	width: 238px;
+	margin: auto;
+	padding: 8px 0px;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 22px;
+	color: rgba(255, 255, 255, 1);
+	letter-spacing: -0.01em;
+}
+
+.booking_a-content-group span {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: 0.01em;	text-align: center;
+}
+
+.booking_a-content-groupa {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: 0.01em;
+}
+
+/*successful page*/
+.ttms-registrationa {
+	text-align: center;
+}
+
+.ttms-registrationa img {
+	height: 300px;
+	width: 300px;
+}
+
+.ttms-registrationa button {
+	background-color: rgba(255, 255, 255, 1);
+	margin-top: 50px;
+	padding: 10px 62px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 32px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: -0.01em;
+	border: none;
+	border-radius: 8px;
+}
+
+/*Agents page */
+.agent-content {
+	width: 100%;
+	max-width: 1116px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.agent-content-text {
+	margin: 40px 0px 20px 0px;
+	color: rgba(255, 255, 255, 1);
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 39px;
+	letter-spacing: -0.01em;
+}
+
+.table-margin {
+	padding: 10px 0px;
+}
+
+.table-content {
+	background-color: rgba(255, 255, 255, 1);
+	width: 100%;
+	max-width: 999px;
+	margin: 0px auto;
+	padding: 10px 0px;
+}
+
+.table-content table {
+	width: 999px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 21px;
+	letter-spacing: 0em;
+	border-collapse: collapse;
+}
+
+.table-content table th {
+	padding: 8px 0px;
+	color: rgba(141, 0, 110, 1);
+	border-left: none;
+	border-top: none;
+	border-left: none;
+	border-bottom: 0.2px solid rgba(30, 30, 30, 0.24);
+	border-right: 0.2px solid rgba(30, 30, 30, 0.24);
+}
+
+.table-content table td {
+	padding: 15px 0px;
+	color: rgba(0, 0, 0, 1);
+	border-top: none;
+	border-left: none;
+	border-bottom: 0.2px solid rgba(30, 30, 30, 0.24);
+	border-right: 0.2px solid rgba(30, 30, 30, 0.24);
+}
+
+.none-border-right {
+	border: none;
+}
+
+.agent-content img {
+	height: 48px;
+	width: 48px;
+	margin-right: 20px;
+	border-radius: 100%;
+	border: 1px solid rgba(141, 0, 110, 1);
+
+}
+
+.agent-image-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* review page */
+.review-content {
+	margin-top: 60px;
+	font-size: 22px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 39px;
+	letter-spacing: -0.01em;
+	text-align: center;
+}
+
+.input-review-content {
+	background-color: rgba(255, 255, 255, 1);
+	text-align: center;
+}
+
+.input-review-content input {
+	width: 575px;
+	padding: 35px 0px 10px 0px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0em;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-bottom: 0.5px solid #673B99;
+}
+
+.review-button {
+	padding: 35px 0px 20px 0px;
+}
+
+.review-button button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	padding: 8px 312px;
+	color: rgba(255, 255, 255, 1);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 29px;
+	letter-spacing: -0.01em;
+	border: none;
+	border-radius: 8px;
+}
+
+/*Dashboard */
+.dashboard {
+	background-color: rgba(255, 255, 255, 1);
+	padding-bottom: 20px;
+}
+
+.dashboard-text {
+	background-color: rgba(217, 217, 217, 0.08);
+	padding: 10px 24px;
+
+}
+
+.dashboard-text p {
+	background: linear-gradient(90deg, #7D0362 13.44%, #FF03C8 129.03%);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	font-size: 32px;
+	font-weight: 600;
+	letter-spacing: 0em;  
+}
+
+.dashboard-text hr {
+	background: linear-gradient(90deg, #8D006E 0%, #FF00C7 73.89%);
+	width: 90px;
+	height: 5px;
+	border: none;
+	border-radius: 10px;
+}
+
+.dashboard-rider-detail {
+	margin: 22px 0px;
+	padding: 0px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: rgba(141, 0, 110, 1);
+}
+
+.dashboard-rider-detail-flex {
+	display: flex;
+	align-items: center;
+}
+
+.dashboard-rider-detail-flex img {
+	background-image: url(../assess/buslogo.png);
+	height: 65px;
+	width: 65px;
+	margin-right: 0px;
+	border-radius: 100%;
+	border: 5px solid whitesmoke;
+}
+
+.dashboard-rider-detail-flex-text {
+	font-size: 18;
+	line-height: 26px;
+	font-weight: 400;
+	letter-spacing: 0em;
+	font-size: 18px;
+}
+
+.dashboard-rider-detail-flex-text span {
+	font-weight: 500;
+}
+
+.dashboard-ride-date {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 31px;
+	letter-spacing: 0em;
+}
+
+.dashboard-logo-logout {
+	margin-right: 10px;
+}
+
+.dashboard-ride-profile {
+	background-color: rgba(217, 217, 217, 0.08);
+	padding: 12px 24px;
+	display: flex;
+	border-bottom: 0.5px solid rgba(141, 0, 110, 0.24);
+}
+
+.dashboard-ride-profile-links p {
+	padding: 9px 0px 23px 0px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 31px;
+	letter-spacing: 0em;
+}
+
+.dashboard-ride-profile-links a {
+	text-decoration: none;
+	color: rgba(141, 0, 110, 1);
+}
+
+.dashboard-ride-profile-links a:hover {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 31px;
+	letter-spacing: 0em;
+}
+
+.dashboard-ride-profile-links hr {
+	background-color: rgba(141, 0, 110, 0.24);
+	height: 0.5px;
+	border: none;
+}
+
+.dashboard-ride-profile-name {
+	margin-left: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: 0em;
+	border-left: 0.5px solid rgba(141, 0, 110, 0.24);
+}
+
+.dashboard-ride-profile-name p {
+	padding: 0px 0px 15px 26px;
+}
+
+.dashboard-ride-profile-name-text {
+	margin-top: 16px;
+}
+
+/* Route page */
+.route-ride-profile-name {
+	height: 111px;
+	margin-left: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+	color: rgba(141, 0, 110, 1);
+	border-left: 0.5px solid rgba(141, 0, 110, 0.24);
+}
+
+.route-ride-profile-name p {
+	padding: 0px 0px 15px 26px;
+}
+
+.route-bold {
+	font-weight: 600;
+}
+
+.roure-button-float {
+	padding-left: 24px;
+}
+
+.route-setting-content button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	padding: 10px 13px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	color: rgba(255, 255, 255, 1);
+	letter-spacing: -0.01em;
+	border: none;
+	border-radius: 8px;
+}
+
+.dashboard-ride-profile {
+	position: relative;
+}
+
+.route-setting-content {
+	position: absolute;
+}
+
+.roure-button-float-button {
+	margin-left: 10px;
+}
