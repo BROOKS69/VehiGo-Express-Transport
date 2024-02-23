@@ -180,8 +180,6 @@ body {
 	width: 850px;
 }
 
-
-
 /*about us*/
 .container_a {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.346), #0000007a), url(../assess/road.avif);
@@ -489,8 +487,6 @@ body {
     text-align: center;
 }
 
-
-
 .rtmreg-section-b button {
 	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
 	margin-top: 30px;
@@ -503,6 +499,11 @@ body {
 	text-align: center;
 	border: none;
 	border-radius: 8px;
+}
+
+.rtmreg-section-b a {
+	text-decoration: none;
+	color: whitesmoke;
 }
 
 .rtmreg_link{
@@ -553,6 +554,11 @@ body {
 	letter-spacing: -0.01em;
 	border: none;
 	border-radius: 8px;
+}
+
+.ttms-registration a{
+	text-decoration: none;
+	color: whitesmoke;
 }
 
 /*booking page*/
@@ -954,6 +960,11 @@ body {
 	color: rgba(255, 255, 255, 1);
 	border: none;
 	border-radius: 8px;
+}
+
+.booking_c-button a{
+	text-decoration: none;
+	color: whitesmoke;
 }
 
 .booking_c_logo {
