@@ -717,7 +717,7 @@ body {
 	text-align: center;
 }
 
-/*Booking_a page*/
+/*booking_paydetial page*/
 .booking_a-content {
 	background-color: rgba(255, 255, 255, 1);
 	width: 100%;
@@ -831,7 +831,7 @@ body {
 	border: 1px solid #8D006E;
 }
 
-/*booking_b page*/
+/*booking_detial page*/
 .booking_b-content {
 	background-color: rgba(255, 255, 255, 1);
 	width: 100%;
@@ -911,7 +911,7 @@ body {
 	color: whitesmoke;
 }
 
-/*booking_c page*/
+/*booking_pay page*/
 .booking_c {
 	background-color: rgba(255, 255, 255, 1);
 	width: 552px;
@@ -976,7 +976,7 @@ body {
 	width: 163px;
 }
 
-/*booking_d page*/
+/*booking_ticket page*/
 .container_d {
 	background-color: rgba(141, 0, 110, 1);
 }
@@ -1072,6 +1072,38 @@ body {
 	border: none;
 	border-radius: 8px;
 }
+
+.ttms-registrationa a{
+	text-decoration: none;
+}
+
+/*delivery_successful page*/
+.ttms-registration {
+	text-align: center;
+}
+
+.ttms-registrationa img {
+	height: 300px;
+	width: 300px;
+}
+
+.ttms-registrationa button {
+	background-color: linear-gradient(180deg, #B10AA7 -14.93%, #CA1CB5 13.65%, #E731C5 81.34%);
+	margin-top: 50px;
+	padding: 10px 62px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 32px;
+	color: rgb(255, 255, 255);
+	letter-spacing: -0.01em;
+	border: none;
+	border-radius: 8px;
+}
+
+.ttms-registrationa a{
+	text-decoration: none;
+}
+
 
 /*Agents page */
 .agent-content {
@@ -1355,6 +1387,11 @@ body {
 	letter-spacing: -0.01em;
 	border: none;
 	border-radius: 8px;
+}
+
+.route-setting-content a {
+	text-decoration: none;
+	color: white;
 }
 
 .dashboard-ride-profile {
