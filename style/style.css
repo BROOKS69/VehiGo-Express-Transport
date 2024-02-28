@@ -1287,6 +1287,11 @@ body {
 	font-size: 18px;
 }
 
+.dashboard-rider-detail-flex-text a{
+	text-decoration: none;
+	color: #7a1e66;
+}
+
 .dashboard-rider-detail-flex-text span {
 	font-weight: 500;
 }
