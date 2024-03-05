@@ -23,7 +23,6 @@ body {
     margin: 0px auto;
 }
 
-
 .ttms_header {
     padding-top: 20px;
 }
@@ -122,7 +121,7 @@ body {
 
 .dropdown {
 	position: relative;
-	display: inline-block;
+	display: inline;
 }
 
 .dropdown-content {
