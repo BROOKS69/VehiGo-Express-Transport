@@ -44,7 +44,7 @@
                     <form class="rtmreg-section-form" method = "post">
                         <p><input type="text" name="fullname" placeholder="Full Name"></p>
                         <p><input type="text" name="lastname" placeholder="Last Name"></p>
-                        <p><input type="email" name="email" placeholder="Email"></p>
+                        <p><input type="email" name="email2" placeholder="Email"></p>
                         <p><input type="number" name="number2" placeholder="Phone Number"></p>
                         <p><input type="address" name="address2" placeholder="Address"></p>
                         
@@ -73,12 +73,12 @@
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
           $fullname = $_POST['fullname'];
           $lastname = $_POST['lastname'];
-          $email = $_POST['email'];
+          $email2 = $_POST['email2'];
           $number2 = $_POST['number2'];
           $address2 = $_POST['address2'];
            
           // Insert form data into the database 
-          $sql = "INSERT into sign_up(fullname, lastname, email, number2, address2)
+          $sql = "INSERT into membership(fullname, lastname, email2, number2, address2)
                   VALUES ('$fullname', '$lastname', '$email', '$number2', '$address2')";
         
           if (mysqli_query($conn, $sql)) {

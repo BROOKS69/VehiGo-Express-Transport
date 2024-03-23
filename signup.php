@@ -1,4 +1,3 @@
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +43,7 @@
                     <form class="rtmreg-section-form" method = "post">
                         <p><input type="text" name="fullname" placeholder="Full Name"></p>
                         <p><input type="text" name="lastname" placeholder="Last Name"></p>
-                        <p><input type="email" name="email" placeholder="Email"></p>
+                        <p><input type="email" name="email1" placeholder="Email"></p>
                         <p><input type="number" name="number1" placeholder="Phone Number"></p>
                         <p><input type="address" name="address1" placeholder="Address"></p>
                         <p><input type="password" name="password1" placeholder="Password"></p>
@@ -61,35 +60,38 @@
         $username = "root";
         $password = "";
         $database = "vehigo_express_bustransport";
-        
+
         $conn = mysqli_connect($host, $username, $password, $database);
-        
-        if (!$conn) {
-          die("Connection failed: " . mysqli_connect_error());
+
+     if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
         }
-       echo "connection success!";
-        
+
+        echo "connection success!";
+
         // Handle form submission and insert data into the database
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
-          $fullname = $_POST['fullname'];
-          $lastname = $_POST['lastname'];
-          $email = $_POST['email'];
-          $number1 = $_POST['number1'];
-          $address1 = $_POST['address1'];
-          $password1 = $_POST['password1'];
-           
-          // Insert form data into the database 
-          $sql = "INSERT into sign_up(fullname, lastname, email, number1, address1, password1)
-                  VALUES ('$fullname', '$lastname', '$email', '$number1', '$address1', '$password1')";
-        
-          if (mysqli_query($conn, $sql)) {
-            echo "requisition_form submitted successfully with status";
-          } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
-        }
+            $fullname = $_POST['fullname'];
+            $lastname = $_POST['lastname'];
+            $email1 = $_POST['email1'];
+            $number1 = $_POST['number1'];
+            $address1 = $_POST['address1'];
+            $password1 = $_POST['password1'];
+   
+            // Insert form data into the database 
+            $sql = "INSERT into sign_up(fullname, lastname, email1, number1, address1, password1)
+               VALUES ('$fullname', '$lastname', '$email1', '$number1', '$address1' '$password1')";
+
+            if (mysqli_query($conn, $sql)) {
+                 echo "requisition_form submitted successfully with status";
+            } 
+            else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+        }   
         mysqli_close($conn);
         ?>
 
+    
     </body>
     
