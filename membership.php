@@ -42,16 +42,14 @@
                 </div>
                 <div class="rtmreg-section-b">
                     <form method = "POST" class="rtmreg-section-form" >
-                        <p><input type="text" name="fullname" placeholder="Full Name"></p>
-                        <p><input type="text" name="lastname" placeholder="Last Name"></p>
-                        <p><input type="email" name="email2" placeholder="Email"></p>
-                        <p><input type="number" name="number2" placeholder="Phone Number"></p>
-                        <p><input type="address" name="address2" placeholder="Address"></p>
+                        <p><input type="text" name="fullname" placeholder="Full Name" required></p>
+                        <p><input type="text" name="lastname" placeholder="Last Name" required></p>
+                        <p><input type="email" name="email2" placeholder="Email" required></p>
+                        <p><input type="number" name="number2" placeholder="Phone Number" required></p>
+                        <p><input type="address" name="address2" placeholder="Address" required></p>
                         
-                        <p><button><a href="registration.html">Register</a></button></p>
+                        <p><button type="submit"><a href="registration.html">Register</a></button></p>
                     </form>
-                    <br>
-                    <p class="rtmreg_link">Already have an account? <a href="login.html">Login</a></p>  
                 </div>   
             </div>
         </section> 

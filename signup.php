@@ -2,7 +2,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Signup Page</title>
+        <title>Sign Up</title>
         <link rel="stylesheet" type="text/css" href="./style/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +33,7 @@
                         </p>
                         <p class="rtmreg_texta">Join Us</p>
                         <p class="rtmreg_textb">Register to join our community <br>of dispatchers</p>
-                        <p><button><a href="about.html">About Us </a></button></p>
+                        <p><button type="button"><a href="about.html">About Us </a></button></p>
                     </div>
                     <div class="rtmreg_button">
                         
@@ -41,15 +41,16 @@
                 </div>
                 <div class="rtmreg-section-b">
                     <form method="POST" class="rtmreg-section-form" >
-                        <p><input type="text" name="fullname" placeholder="Full Name"></p>
-                        <p><input type="text" name="lastname" placeholder="Last Name"></p>
-                        <p><input type="email" name="email1" placeholder="Email"></p>
-                        <p><input type="number" name="number1" placeholder="Phone Number"></p>
-                        <p><input type="address" name="address1" placeholder="Address"></p>
-                        <p><input type="password" name="password1" placeholder="Password"></p>
-                        <p><button><a href="registration.html">Register</a></button></p>
+                        <p><input type="text" name="fullname" id="fullname"  placeholder="Full Name" required></p>
+                        <p><input type="text" name="lastname" id="lastname" placeholder="Last Name" required></p>
+                        <p><input type="email" name="email1" id="email1" placeholder="Email" required></p>
+                        <p><input type="number" name="number1" id="number1" placeholder="Phone Number" required></p>
+                        <p><input type="address" name="address1" id="address1" placeholder="Address" required></p>
+                        <p><input type="password" name="password1" placeholder="Password" required></p>
+
+                        <p><button type="submit"><a href="registration.html">Register</button></p>
                     </form>
-                    <br>
+                    <br><p> </p>
                     <p class="rtmreg_link">Already have an account? <a href="login.html">Login</a></p>  
                 </div>   
             </div>
@@ -86,7 +87,7 @@
 
             if($conn->query($query) === TRUE)
             {
-                echo "Registration successful";
+                // echo "Registration successful";
             }          
             else{
                 echo "Error: " . $query . "<br>" . $conn->error;
@@ -96,6 +97,9 @@
 
         // close the connection
         $conn->close();
+
+
+
 
         ?>
     
