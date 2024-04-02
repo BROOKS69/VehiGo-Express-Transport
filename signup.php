@@ -57,7 +57,7 @@
         </section> 
 
         <?php
-        // Databae connection parameters
+        // Database connection parameters
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -93,13 +93,23 @@
                 echo "Error: " . $query . "<br>" . $conn->error;
             
             }
+
+            // display the user detail on the dashboard
+            $fullname = htmlspecialchars(trim($_POST['fullname']));
+            $lastname = htmlspecialchars(trim($_POST['lastname']));
+            $email = htmlspecialchars(trim($_POST['email1']));
+            $number = htmlspecialchars(trim($_POST['number1']));
+            $address = htmlspecialchars(trim($_POST['address1']));
+
+            // Save user details in a database or a session, depending on your application needs.
+            // Then, redirect the user to the dashboard.
+            header("Location: dashboard.html");
+            exit();
+
         }
 
         // close the connection
         $conn->close();
-
-
-
 
         ?>
     

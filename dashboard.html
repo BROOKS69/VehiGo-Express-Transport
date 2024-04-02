@@ -10,9 +10,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-       <!--<script defer>
+
+        <script defer>
             document.querySelector(".dashboard-ride-date").textContent = new Date().getFullYear();
-        </script>--> 
+        </script>
     </head>
     <body>
         <section class="container_d">
@@ -53,20 +54,44 @@
                     <div class="dashboard-ride-profile-links">
                         <p><a href="dashboard.html">Profile</a></p>
                         <hr>
+                        <br> 
                         <p><a href="route.html">Route</a></p>
                         <hr>
+                        <br>
+                        <br>
                         <p><a href="#">Package Detial</a></p>
                         
                     </div>
                     <div class="dashboard-ride-profile-name">
-                        <p class="dashboard-ride-profile-name-text">First Name: </p>
+                        <p class="dashboard-ride-profile-name-text">Full Name:  </p>
+                        <p id="fullname-display"> <!-- User's full name will be inserted via JavaScript --> </p>
+
+                        <p class="dashboard-ride-profile-name-text">Last Name: </p>
+                        <p id="lastname-display"> <!-- User's last name will be inserted via JavaScript --> </p>
+
+                        <p class="dashboard-ride-profile-name-text">Email: </p>
+                        <p id="email1-display"> <!-- User's email will be inserted via JavaScript --> </p>
+
+                        <p class="dashboard-ride-profile-name-text">Phone Number: </p>
+                        <p id="number1-display"> <!-- User's phone number will be inserted via JavaScript --> </p>
+
+                        <p class="dashboard-ride-profile-name-text">Address: </p>
+                        <p id="address1-display"> <!-- User's address will be inserted via JavaScript --> </p>
+
+
+                       <!-- <p class="dashboard-ride-profile-name-text">First Name: </p>
                         <p>Last Name: <span></span></p>
                         <p>Email: <span></span></p>
                         <p>Phone Number: <span></span></p>
-                        <p>Address: <span></span></p>
+                        <p>Address: <span></span></p> -->
                     </div>
                 </div>
-            </div>  
+            </div>
+            <script>
+                // Get the user input saved in the database or session
+                // and insert it into the corresponding placeholders
+            </script>
+
             <footer class="footer-booking">
                 <div class="bottom-footera">
 					<span><svg width="23" height="23" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

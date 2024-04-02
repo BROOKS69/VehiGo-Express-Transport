@@ -1,5 +1,4 @@
-<!DOCTYPE Html>
-<html>
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,10 +39,10 @@
                     <p>Welcome back,please login to<br>your account</p>
                 </div>
                 <div class="form_input">
-                    <form>
-                        <p><input type="email" name="admin" placeholder="Email/Username"></p>
-                        <p><input type="password" name="admin" placeholder="Password"></p>
-                        <p><button>Login</button></p>
+                    <form method="POST">
+                        <p><input type="email" name="email" id="email" placeholder="Email/Username" required></p>
+                        <p><input type="password" name="password" placeholder="Password" required></p>
+                        <p><button type="submit" <a href="index.html"</a>Login</button></p>
                         <div class= "rtmslogin_footer_or">
                             <p class="rtmslogin_footer_or_hr"></p>
                             <span class="rtmslogin_footer_or_text">or</span>
@@ -89,6 +88,42 @@
                 </div>
             </div>
         </section>
+
+             <?php
+                // Database connection parameters
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "vehigo_express_bustransport";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+                }
+
+                // interaction with the database connection
+                session_start();
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+
+                $sql = "SELECT id, password FROM users WHERE email='$email'";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    if ($password == $row["password"]) {
+                        session_login($email);
+                        header("Location: index.html");
+                        exit;
+                    } else {
+                        echo "Incorrect password";
+                    }
+                } else {
+                    echo "User not found";
+                }
+            ?>
         
     </body>
-</html>
