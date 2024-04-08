@@ -105,25 +105,7 @@
                 }
 
                 // interaction with the database connection
-                session_start();
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-
-                $sql = "SELECT id, password FROM users WHERE email='$email'";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    if ($password == $row["password"]) {
-                        session_login($email);
-                        header("Location: index.html");
-                        exit;
-                    } else {
-                        echo "Incorrect password";
-                    }
-                } else {
-                    echo "User not found";
-                }
+               
             ?>
         
     </body>
