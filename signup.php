@@ -76,13 +76,13 @@
             <div class="testing">
                 <div class="ttms_header_content">
                         <div class="ttms_header_logo">
-                            <a href="index.html"><img src="./assess/logo.png" alt="logo" width="192px" height="94px"></a>
+                            <a href="index.php"><img src="./assess/logo.png" alt="logo" width="192px" height="94px"></a>
                         </div>
                         <div class="ttms_header_divider">
-                            <a href="index.html"><img src="./assess/sid-divider.png" alt="sid-divider"></a>
+                            <a href="index.php"><img src="./assess/sid-divider.png" alt="sid-divider"></a>
                         </div>
                         <div class="ttms_header_text">
-                            <a href="index.html"><span class="ttms-logo-ride">VehiGo Express, GHANA</span><br>BUS TRANSPORT<br>MANAGEMENET<br>SYSTEM</span></a>
+                            <a href="index.php"><span class="ttms-logo-ride">VehiGo Express, GHANA</span><br>BUS TRANSPORT<br>MANAGEMENET<br>SYSTEM</span></a>
                         </div>
                 </div>   
             </div>   
