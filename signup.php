@@ -1,3 +1,65 @@
+    <?php
+    session_start();
+
+    ?>
+    <?php
+        // Database connection parameters
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "vehigo_express_bustransport";
+
+        // createing a connection
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        // Check connection
+        if ($conn->connect_error){
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // handling the submission
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $fullname = $_POST["fullname"];
+            $lastname = $_POST["lastname"];
+            $email = $_POST["email"];
+            $number1 = $_POST["number1"];
+            $address1 = $_POST["address1"];
+            $password = md5($_POST["password"]); // Hashes the password
+
+            $query = "INSERT INTO sign_up (fullname, lastname, email, number1, address1, password)
+
+                      VALUES ('$fullname', ' $lastname', ' $email', '$number1', '$address1', '$password')";
+
+            if($conn->query($query) === TRUE)
+            {
+                // echo "Registration successful";
+            }          
+            else{
+                echo "Error: " . $query . "<br>" . $conn->error;
+            
+            }
+
+            // display the user detail on the dashboard
+            $fullname = htmlspecialchars(trim($_POST['fullname']));
+            $lastname = htmlspecialchars(trim($_POST['lastname']));
+            $email = htmlspecialchars(trim($_POST['email']));
+            $number = htmlspecialchars(trim($_POST['number1']));
+            $address = htmlspecialchars(trim($_POST['address1']));
+
+            // Save user details in a database or a session, depending on your application needs.
+            // Then, redirect the user to the dashboard.
+            header("Location: login.php");
+            exit();
+
+        }
+
+        // close the connection
+        $conn->close();
+
+        ?>
+    
+    
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +102,7 @@
                     </div>
                 </div>
                 <div class="rtmreg-section-b">
-                    <form method="POST" class="rtmreg-section-form" >
+                    <form action ="signup.php" method="POST" class="rtmreg-section-form" >
                         <p><input type="text" name="fullname" id="fullname"  placeholder="Full Name" required></p>
                         <p><input type="text" name="lastname" id="lastname" placeholder="Last Name" required></p>
                         <p><input type="email" name="email1" id="email1" placeholder="Email" required></p>
@@ -56,62 +118,6 @@
             </div>
         </section> 
 
-        <?php
-        // Database connection parameters
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "vehigo_express_bustransport";
-
-        // createing a connection
-        $conn = new mysqli($servername, $username, $password, $database);
-
-        // Check connection
-        if ($conn->connect_error){
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // handling the submission
-        if($_SERVER["REQUEST_METHOD"] == "POST")
-        {
-            $fullname = $_POST["fullname"];
-            $lastname = $_POST["lastname"];
-            $email1 = $_POST["email1"];
-            $number1 = $_POST["number1"];
-            $address1 = $_POST["address1"];
-            $password1 = password_hash($_POST["password1"], PASSWORD_DEFAULT); // Hashes the password
-
-            $query = "INSERT INTO sign_up (fullname, lastname, email1, number1, address1, password1)
-
-                      VALUES ('$fullname', ' $lastname', ' $email1', '$number1', '$address1', '$password1')";
-
-            if($conn->query($query) === TRUE)
-            {
-                // echo "Registration successful";
-            }          
-            else{
-                echo "Error: " . $query . "<br>" . $conn->error;
-            
-            }
-
-            // display the user detail on the dashboard
-            $fullname = htmlspecialchars(trim($_POST['fullname']));
-            $lastname = htmlspecialchars(trim($_POST['lastname']));
-            $email = htmlspecialchars(trim($_POST['email1']));
-            $number = htmlspecialchars(trim($_POST['number1']));
-            $address = htmlspecialchars(trim($_POST['address1']));
-
-            // Save user details in a database or a session, depending on your application needs.
-            // Then, redirect the user to the dashboard.
-            header("Location: dashboard.html");
-            exit();
-
-        }
-
-        // close the connection
-        $conn->close();
-
-        ?>
-    
+        
     </body>
     

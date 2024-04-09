@@ -1,4 +1,26 @@
 
+
+
+<?php
+                // Database connection parameters
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "vehigo_express_bustransport";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+                }
+
+                // interaction with the database connection
+                session_start();
+               
+            ?>
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +34,47 @@
     </head>
     <body>
         <section class="container_b">
+            <?php
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $email = mysqli_real_escape_string($conn,$_POST['email']);
+            $password = mysqli_real_escape_string($conn, md5($_POST['password'])); // Hashes the password
+
+           $result = mysqli_query($conn, "SELECT * FROM sign_up WHERE Email='$email' AND Password = '$password'")
+           or die("Select Error");
+           $row = mysqli_fetch_assoc($result);
+
+           if (is_array($row) && !empty($row)) {
+            if (isset($row['Email'])) {
+                $_SESSION['Valid'] = $row['Email'];
+            }
+            if (isset($row['Id'])) {
+                $_SESSION['id'] = $row['Id'];
+            }
+           }
+            if($result)
+            {
+                $_SESSION['Valid'] = true;
+                header("Location: booking.php");
+                // echo "Registration successful";
+            }          
+            else{
+                echo "Error: " . $query . "<br>" . $conn->error;
+            
+            }
+        }else{
+
+        ?>
             <div class="rtm_tricyle">
                 <div class="ttms_header_content">
                     <div class="ttms_header_logo">
-                        <a href="index.html"><img src="./assess/logo.png" alt="logo" width="192px" height="94px"></a>
+                        <a href="index.php"><img src="./assess/logo.png" alt="logo" width="192px" height="94px"></a>
                     </div>
                     <div class="ttms_header_divider">
-                        <a href="index.html"><img src="./assess/sid-divider.png" alt="sid-divider"></a>
+                        <a href="index.php"><img src="./assess/sid-divider.png" alt="sid-divider"></a>
                     </div>
                     <div class="ttms_header_text">
-                        <a href="index.html"><span class="ttms-logo-ride">VehiGo Express, GHANA</span><br>BUS TRANSPORT<br>MANAGEMENET<br>SYSTEM</span></a>
+                        <a href="index.php"><span class="ttms-logo-ride">VehiGo Express, GHANA</span><br>BUS TRANSPORT<br>MANAGEMENET<br>SYSTEM</span></a>
                     </div>
                 </div>
                 <div class="rtm_tricyle_bg">
@@ -29,6 +82,7 @@
                 </div>
             </div>
             <div class="RTMSlogin">
+                
                 <div class="login">
                     <div class="login_text">
                         <p>Login</p>
@@ -39,10 +93,10 @@
                     <p>Welcome back,please login to<br>your account</p>
                 </div>
                 <div class="form_input">
-                    <form method="POST">
+                    <form action="login.php" method="POST">
                         <p><input type="email" name="email" id="email" placeholder="Email/Username" required></p>
                         <p><input type="password" name="password" placeholder="Password" required></p>
-                        <p><button type="submit" <a href="index.html"</a>Login</button></p>
+                        <p><button type="submit" <a href="booking.php"</a>Login</button></p>
                         <div class= "rtmslogin_footer_or">
                             <p class="rtmslogin_footer_or_hr"></p>
                             <span class="rtmslogin_footer_or_text">or</span>
@@ -87,25 +141,8 @@
                     </div> 
                 </div>
             </div>
+            <?php } ?>
         </section>
 
-             <?php
-                // Database connection parameters
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "vehigo_express_bustransport";
-
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                // Check connection
-                if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-                }
-
-                // interaction with the database connection
-               
-            ?>
         
     </body>
