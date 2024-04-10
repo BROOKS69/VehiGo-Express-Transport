@@ -1,6 +1,3 @@
-
-
-
 <?php
                 // Database connection parameters
                 $servername = "localhost";
@@ -16,8 +13,12 @@
                 die("Connection failed: " . $conn->connect_error);
                 }
 
-                // interaction with the database connection
-                session_start();
+                // // interaction with the database connection
+                // session_start();
+                // if (!isset($_SESSION['valid'])) {
+                //     # code...
+                //     header("Location: login.php");
+                //  }
                
             ?>
 
@@ -37,10 +38,10 @@
             <?php
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            $email = mysqli_real_escape_string($conn,$_POST['email']);
+            $email1 = mysqli_real_escape_string($conn,$_POST['email1']);
             $password = mysqli_real_escape_string($conn, md5($_POST['password'])); // Hashes the password
 
-           $result = mysqli_query($conn, "SELECT * FROM sign_up WHERE Email='$email' AND Password = '$password'")
+           $result = mysqli_query($conn, "SELECT * FROM sign_up WHERE Email='$email1' AND Password = '$password'")
            or die("Select Error");
            $row = mysqli_fetch_assoc($result);
 
@@ -56,6 +57,7 @@
             {
                 $_SESSION['Valid'] = true;
                 header("Location: booking.php");
+                header("Location: delivery.php");
                 // echo "Registration successful";
             }          
             else{

@@ -1,5 +1,4 @@
-<!DOCTYPE Html>
-<html>
+    
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,12 +30,14 @@
                     <p>What do you have to say about us ?</p>
                 </div>
                 <div class="input-review-content">
-                    <p><input type="text" name="name" placeholder="Your Name (optional)"></p>
-                    <p><input type="number" name="phonenumber" placeholder="Phone Number (optional)"></p>
-                    <p><input type="text" name="complaintorrecommendation" placeholder="Your complaint or Recommendation"></p>
+                    <form method="POST">
+                    <p><input type="text" name="name1" placeholder="Your Name (optional)"></p>
+                    <p><input type="number" name="phone" placeholder="Phone Number (optional)"></p>
+                    <p><input type="text" name="recom_plain" placeholder="Your complaint or Recommendation" required></p>
                     <div class="review-button">
-                        <button>Submit</button>
+                        <button type="submit">Submit</button>
                     </div>
+                    </form>
                 </div> 
             </div>  
             <footer class="footer-booking">
@@ -63,5 +64,46 @@
 				</div>
             </footer>
         </section> 
+
+        <?php
+        // Databae connection parameters
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "vehigo_express_bustransport";
+
+        // createing a connection
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        // Check connection
+        if ($conn->connect_error){
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // handling the submission
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $name1 = $_POST["name1"];
+            $phone = $_POST["phone"];
+            $recom_plain = $_POST["recom_plain"];
+           
+            $query = "INSERT INTO review (name1, phone, recom_plain)
+
+                      VALUES ('$name1', ' $phone', ' $recom_plain')";
+
+            if($conn->query($query) === TRUE)
+            {
+                echo "Registration successful";
+            }          
+            else{
+                echo "Error: " . $query . "<br>" . $conn->error;
+            
+            }
+        }
+
+        // close the connection
+        $conn->close();
+
+        ?>
+
     </body>
-</html>
