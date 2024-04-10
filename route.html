@@ -10,11 +10,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <script defer>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelector(".dashboard-ride-date").textContent = new Date();
+            })
+    
+        </script>
     </head>
     <body>
         <section class="container_d">
             <div class="testing">
-                <div class="ttms_header_content">
+                <div class="ttms_header_content"> 
                         <div class="ttms_header_logo">
                             <a href="index.php"><img src="./assess/logo.png" alt="logo" width="192px" height="94px"></a>
                         </div>
