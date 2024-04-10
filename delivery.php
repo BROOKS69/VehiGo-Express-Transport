@@ -16,10 +16,10 @@
 
                 // interaction with the database connection
              
-                if (!isset($_SESSION['valid'])) {
-                    # code...
-                  header("Location: login.php");
-                }
+                // if (!isset($_SESSION['valid'])) {
+                //     # code...
+                //   header("Location: login.php");
+                // }
         
                
             ?>
@@ -56,11 +56,11 @@
                 <div class="booking_b-content-fl">
                     <div class="booking_b-content-flex">
                         <p class="booking_b-content-text">Courier Details</p>
-                        <form>
-                            <p><input type="text" name="courier_name" placeholder="Courier name"></p>
-                            <p><input type="number" name="contact" placeholder="Phone"></p>
-                            <p><input type="email" name="email" placeholder="Email"></p>
-                            <p><input type="text" name="courier_adrs" placeholder="Courier address"></p>
+                        <form method = "POST">
+                            <p><input type="text" name="couriername" placeholder="Courier name" required></p>
+                            <p><input type="number" name="contact" placeholder="Phone" required></p>
+                            <p><input type="email" name="email3" placeholder="Email" required></p>
+                            <p><input type="text" name="courieradrs" placeholder="Courier address" required></p>
                         </form> 
                     </div>
                     <div class="booking_b-divider">
@@ -68,16 +68,16 @@
                     </div>
                     <div class="booking_b-content-flex">
                         <p class="booking_b-content-text">Recipient Details</p>
-                        <form>
-                            <p><input type="text" name="reciever_name" placeholder="Reciever name"></p>
-                            <p><input type="number" name="reciever_contact" placeholder="Reciever contact"></p>
-                            <p><input type="text" name="item_name" placeholder="Package name"></p>
-                            <p><input type="text" name="reciever_adrs" placeholder="Reciver address"></p>
+                        <form method = "POST">
+                            <p><input type="text" name="recievername" placeholder="Reciever name" required></p>
+                            <p><input type="number" name="recievercontact" placeholder="Reciever contact" required></p>
+                            <p><input type="text" name="itemname" placeholder="Package name" required></p>
+                            <p><input type="text" name="recieveradrs" placeholder="Reciver address" required></p>
                         </form> 
                     </div>
                 </div>
                 <div class="booking_b-button">
-                    <button><a href="delivery_successful.html">Sumbit To Be Delivered</a></button>
+                    <button type="submit"><a href="delivery_successful.html">Sumbit To Be Delivered</a></button>
                 </div>
             </div>
             
@@ -104,6 +104,53 @@
                     </p>
 				</div>
             </footer>
-        </section> 
+        </section>
+        
+        <?php
+        // Databae connection parameters
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "vehigo_express_bustransport";
+
+        // createing a connection
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        // Check connection
+        if ($conn->connect_error){
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // handling the submission
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $couriername = $_POST["couriername"];
+            $contact = $_POST["contact"];
+            $email3 = $_POST["email3"];
+            $courieradrs = $_POST["courieradrs"];
+            $recievername = $_POST["recievername"];
+            $recievercontact = $_POST["recievercontact"];
+            $itemname = $_POST["itemname"];
+            $recieveradrs = $_POST["recieveradrs"];
+           
+            $query = "INSERT INTO delivery (couriername, contact, email3,  courieradrs, recievername, recievercontact, itemname, reciever_adrs)
+
+                      VALUES ('$couriername', ' $contact', ' $email3', '$courieradrs', '$recievername', '$recievercontact', '$recievercontact', '$itemname', '$recieveradrs')";
+
+            if($conn->query($query) === TRUE)
+            {
+                echo "Registration successful";
+            }          
+            else{
+                echo "Error: " . $query . "<br>" . $conn->error;
+            
+            }
+        }
+
+        // close the connection
+        $conn->close();
+
+        ?>
+        
     </body>
 </html>
