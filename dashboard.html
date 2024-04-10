@@ -12,7 +12,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
         <script defer>
-            document.querySelector(".dashboard-ride-date").textContent = new Date().getFullYear();
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelector(".dashboard-ride-date").textContent = new Date();
+            })
+    
         </script>
     </head>
     <body>
@@ -47,7 +50,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 11V0.5H9.75V11H8.25Z" fill="#8D006E"/>
                             </svg>                            
                         </p>
-                        <p class="dashboard-rider-detail-flex-text"><a href="index.html">LOGOUT</a></p>
+                        <p class="dashboard-rider-detail-flex-text"><a href="index.php">LOGOUT</a></p>
                     </div>
                 </div>
                 <div class="dashboard-ride-profile">
