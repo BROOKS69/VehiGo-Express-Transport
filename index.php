@@ -13,12 +13,12 @@
                 die("Connection failed: " . $conn->connect_error);
                 }
 
-                // interaction with the database connection
-                session_start();
+                //interaction with the database connection
+                // session_start();
                 // if (!isset($_SESSION['valid'])) {
                 //     # code...
                 //     header("Location: login.php");
-                // }
+                //  }
         
                
             ?>
@@ -60,9 +60,9 @@
                                     <div class="dropdown-content">
                                       <a href="membership.php">Membership</a>
                                       <a href="booking.php">Booking</a>
-                                      <a href="delivery.html">Delivery</a>
+                                      <a href="delivery.php">Delivery</a>
                                       <a href="agent.html">Agents</a>
-                                      <a href="review.html">Reviews</a>
+                                      <a href="review.php">Reviews</a>
                                     </div>
                                   </div>
                                 </li>
