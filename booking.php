@@ -15,9 +15,8 @@
                 }
 
                 // interaction with the database connection
-             
                 if (!isset($_SESSION['valid'])) {
-                    # code...
+                    # code....
                   header("Location: login.php");
                 }
         
