@@ -57,10 +57,17 @@
                     <div class="booking_b-content-flex">
                         <p class="booking_b-content-text">Courier Details</p>
                         <form method = "POST">
+<<<<<<< HEAD
                             <p><input type="text" name="couriername" placeholder="Courier name" required></p>
                             <p><input type="number" name="contact" placeholder="Phone" required></p>
                             <p><input type="email" name="email3" placeholder="Email" required></p>
                             <p><input type="text" name="courieradrs" placeholder="Courier address" required></p>
+=======
+                            <p><input type="text" name="courier_name" placeholder="Courier name"></p>
+                            <p><input type="number" name="contact" placeholder="Phone"></p>
+                            <p><input type="email" name="email3" placeholder="Email"></p>
+                            <p><input type="text" name="courier_adrs" placeholder="Courier address"></p>
+>>>>>>> 0b20eb273bae846ca1d1c0ced1a1a5d286d30d86
                         </form> 
                     </div>
                     <div class="booking_b-divider">
@@ -69,10 +76,17 @@
                     <div class="booking_b-content-flex">
                         <p class="booking_b-content-text">Recipient Details</p>
                         <form method = "POST">
+<<<<<<< HEAD
                             <p><input type="text" name="recievername" placeholder="Reciever name" required></p>
                             <p><input type="number" name="recievercontact" placeholder="Reciever contact" required></p>
                             <p><input type="text" name="itemname" placeholder="Package name" required></p>
                             <p><input type="text" name="recieveradrs" placeholder="Reciver address" required></p>
+=======
+                            <p><input type="text" name="reciever_name" placeholder="Reciever name"></p>
+                            <p><input type="number" name="reciever_contact" placeholder="Reciever contact"></p>
+                            <p><input type="text" name="item_name" placeholder="Package name"></p>
+                            <p><input type="text" name="reciever_adrs" placeholder="Reciver address"></p>
+>>>>>>> 0b20eb273bae846ca1d1c0ced1a1a5d286d30d86
                         </form> 
                     </div>
                 </div>
@@ -124,6 +138,7 @@
         // handling the submission
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
+<<<<<<< HEAD
             $couriername = $_POST["couriername"];
             $contact = $_POST["contact"];
             $email3 = $_POST["email3"];
@@ -136,6 +151,22 @@
             $query = "INSERT INTO delivery (couriername, contact, email3,  courieradrs, recievername, recievercontact, itemname, reciever_adrs)
 
                       VALUES ('$couriername', ' $contact', ' $email3', '$courieradrs', '$recievername', '$recievercontact', '$recievercontact', '$itemname', '$recieveradrs')";
+=======
+            $courier_name = $_POST["courier_name"];
+            $contact = $_POST["contact"];
+            $email3 = $_POST["email3"];
+            $courier_adrs = $_POST["courier_adrs"];
+            $reciever_name = $_POST["reciever_name"];
+            $reciever_contact = $_POST["reciever_contact"];
+            $item_name = $_POST["item_name"];
+            $reciever_adrs = $_POST["reciever_adrs"];
+           
+            $query = "INSERT INTO delivery (courier_name, contact, email3,  courier_adrs,
+                                     reciever_name, reciever_contact, item_name, reciever_adrs)
+
+                      VALUES ('$courier_name', ' $contact', ' $email3', '$courier_adrs', '$reciever_name', 
+                                '$reciever_contact', '$reciever_contact', '$item_name', '$reciever_adrs')";
+>>>>>>> 0b20eb273bae846ca1d1c0ced1a1a5d286d30d86
 
             if($conn->query($query) === TRUE)
             {
