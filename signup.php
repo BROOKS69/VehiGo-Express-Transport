@@ -1,6 +1,9 @@
     <?php
-    session_start();
-
+        session_start();
+        // if (!isset($_SESSION['valid'])) {
+        //     # code...
+        //     header("Location: login.php");
+        // }
     ?>
     <?php
         // Database connection parameters
@@ -22,14 +25,14 @@
         {
             $fullname = $_POST["fullname"];
             $lastname = $_POST["lastname"];
-            $email = $_POST["email"];
+            $email1 = $_POST["email1"];
             $number1 = $_POST["number1"];
             $address1 = $_POST["address1"];
             $password = md5($_POST["password"]); // Hashes the password
 
-            $query = "INSERT INTO sign_up (fullname, lastname, email, number1, address1, password)
+            $query = "INSERT INTO sign_up (fullname, lastname, email1, number1, address1, password)
 
-                      VALUES ('$fullname', ' $lastname', ' $email', '$number1', '$address1', '$password')";
+                      VALUES ('$fullname', ' $lastname', ' $email1', '$number1', '$address1', '$password')";
 
             if($conn->query($query) === TRUE)
             {
@@ -41,15 +44,15 @@
             }
 
             // display the user detail on the dashboard
-            $fullname = htmlspecialchars(trim($_POST['fullname']));
-            $lastname = htmlspecialchars(trim($_POST['lastname']));
-            $email = htmlspecialchars(trim($_POST['email']));
-            $number = htmlspecialchars(trim($_POST['number1']));
-            $address = htmlspecialchars(trim($_POST['address1']));
+            // $fullname = htmlspecialchars(trim($_POST['fullname']));
+            // $lastname = htmlspecialchars(trim($_POST['lastname']));
+            // $email = htmlspecialchars(trim($_POST['email']));
+            // $number = htmlspecialchars(trim($_POST['number1']));
+            // $address = htmlspecialchars(trim($_POST['address1']));
 
             // Save user details in a database or a session, depending on your application needs.
             // Then, redirect the user to the dashboard.
-            header("Location: login.php");
+           header("Location: dashboard.html");
             exit();
 
         }
