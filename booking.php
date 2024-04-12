@@ -48,97 +48,100 @@
                             <div class="flex-booking-content">
                                 <div class="select-booking-content">
                                     <p class="text-booking-content">Location<br>
-                                    <select id="box1">
+                                  <form action="booking.php" method="POST">
+                                  <select name="location">
                                         <option>  </option>
-                                        <option value="">Accra(Ghana)</option>
-                                        <option>Winneba(Ghana)</option>
-                                        <option value="">Koforidua(Ghana)</option>
-                                        <option>Temale(Ghana)</option>
-                                        <option value="">Tema(Ghana)</option>
-                                        <option>Agona-Swedru(Ghana)</option>
-                                        <option value="">Kumasi(Ghana)</option>
-                                        <option>Sunyani(Ghana)</option>
-                                        <option value="">Techiman(Ghana)</option>
-                                        <option>Madina(Ghana)</option>
-                                        <option value="">Bolgatanga(Ghana)</option>
-                                        <option>Tarkwa(Ghana)</option>
-                                        <option value="">Savelugu(Ghana)</option>
-                                        <option>Kasoa(Ghana)</option>
-                                        <option value="">Elmina(Ghana)</option>
-                                        <option>Tafo(Ghana)</option>
-                                        <option value="">Hohoe(Ghana)</option>
-                                        <option>Ashaiman(Ghana)</option>
-                                        <option value="">Obuasi(Ghana)</option>
-                                        <option>Wa(Ghana)</option>
-                                        <option value="">Ho(Ghana)</option>
-                                        <option>Kintampo(Ghana)</option>
-                                        <option value="">Nsawan(Ghana)</option>
-                                        <option>Akim Oda(Ghana)</option>
+                                        <option value="Accra(Ghana)">Accra(Ghana)</option>
+                                        <option value="Winneba(Ghana)">Winneba(Ghana)</option>
+                                        <option value="Koforidua(Ghana)">Koforidua(Ghana)</option>
+                                        <option value="Koforidua(Ghana)">Temale(Ghana)</option>
+                                        <option value="Tema(Ghana)">Tema(Ghana)</option>
+                                        <option value="Agona-Swedru(Ghana)">Agona-Swedru(Ghana)</option>
+                                        <option value="Kumasi(Ghana)">Kumasi(Ghana)</option>
+                                        <option value="Sunyani(Ghana)">Sunyani(Ghana)</option>
+                                        <option value="Techiman(Ghana)">Techiman(Ghana)</option>
+                                        <option value="Madina(Ghana)">Madina(Ghana)</option>
+                                        <option value="Bolgatanga(Ghana)">Bolgatanga(Ghana)</option>
+                                        <option value="Tarkwa(Ghana)">Tarkwa(Ghana)</option>
+                                        <option value="Savelugu(Ghana)">Savelugu(Ghana)</option>
+                                        <option value="Kasoa(Ghana)">Kasoa(Ghana)</option>
+                                        <option value="Elmina(Ghana)">Elmina(Ghana)</option>
+                                        <option value="Tafo(Ghana)">Tafo(Ghana)</option>
+                                        <option value="Hohoe(Ghana)">Hohoe(Ghana)</option>
+                                        <option value="Ashaiman(Ghana)">Ashaiman(Ghana)</option>
+                                        <option value="Obuasi(Ghana)">Obuasi(Ghana)</option>
+                                        <option value="Wa(Ghana">Wa(Ghana)</option>
+                                        <option value="Ho(Ghana)">Ho(Ghana)</option>
+                                        <option value="Kintampo(Ghana)">Kintampo(Ghana)</option>
+                                        <option value="Nsawan(Ghana)">Nsawan(Ghana)</option>
+                                        <option value="Akim Oda(Ghana)">Akim Oda(Ghana)</option>
                                     </select></p>
-                                </div>
+                                    </div>
                                 <div class="select-booking-content select-booking-space">
                                     <p class="text-booking-content">Destination<br>
-                                    <select id="box2">
+                                    <select name="destination">
                                         <option>  </option>
-                                        <option value="">Temale(Ghana)</option>
-                                        <option>Winneba(Ghana)</option>
-                                        <option value="">Koforidua(Ghana)</option>
-                                        <option>Accra(Ghana)</option>
-                                        <option value="">Tema(Ghana)</option>
-                                        <option>Agona-Swedru(Ghana)</option>
-                                        <option value="">Kumasi(Ghana)</option>
-                                        <option>Sunyani(Ghana)</option>
-                                        <option value="">Techiman(Ghana)</option>
-                                        <option>Madina(Ghana)</option>
-                                        <option value="">Bolgatanga(Ghana)</option>
-                                        <option>Tarkwa(Ghana)</option>
-                                        <option value="">Savelugu(Ghana)</option>
-                                        <option>Kasoa(Ghana)</option>
-                                        <option value="">Elmina(Ghana)</option>
-                                        <option>Tafo(Ghana)</option>
-                                        <option value="">Hohoe(Ghana)</option>
-                                        <option>Ashaiman(Ghana)</option>
-                                        <option value="">Obuasi(Ghana)</option>
-                                        <option>Wa(Ghana)</option>
-                                        <option value="">Ho(Ghana)</option>
-                                        <option>Kintampo(Ghana)</option>
-                                        <option value="">Nsawan(Ghana)</option>
-                                        <option>Akim Oda(Ghana)</option>
+                                        <option value="Kasoa(Ghana)">Kasoa(Ghana)</option>
+                                        <option value="Elmina(Ghana)">Elmina(Ghana)</option>
+                                        <option value="Tafo(Ghana)">Tafo(Ghana)</option>
+                                        <option value="Hohoe(Ghana)">Hohoe(Ghana)</option>
+                                        <option value="Winneba(Ghana)">Winneba(Ghana)</option>
+                                        <option value="Koforidua(Ghana)">Koforidua(Ghana)</option>
+                                        <option value="Koforidua(Ghana)">Temale(Ghana)</option>
+                                        <option value="Tema(Ghana)">Tema(Ghana)</option>
+                                        <option value="Agona-Swedru(Ghana)">Agona-Swedru(Ghana)</option>
+                                        <option value="Kumasi(Ghana)">Kumasi(Ghana)</option>
+                                        <option value="Sunyani(Ghana)">Sunyani(Ghana)</option>
+                                        <option value="Techiman(Ghana)">Techiman(Ghana)</option>
+                                        <option value="Accra(Ghana)">Accra(Ghana)</option>
+                                        <option value="Ho(Ghana)">Ho(Ghana)</option>
+                                        <option value="Kintampo(Ghana)">Kintampo(Ghana)</option>
+                                        <option value="Nsawan(Ghana)">Nsawan(Ghana)</option>
+                                        <option value="Akim Oda(Ghana)">Akim Oda(Ghana)</option>
+                                        <option value="Madina(Ghana)">Madina(Ghana)</option>
+                                        <option value="Bolgatanga(Ghana)">Bolgatanga(Ghana)</option>
+                                        <option value="Tarkwa(Ghana)">Tarkwa(Ghana)</option>
+                                        <option value="Savelugu(Ghana)">Savelugu(Ghana)</option>
+                                        <option value="Ashaiman(Ghana)">Ashaiman(Ghana)</option>
+                                        <option value="Obuasi(Ghana)">Obuasi(Ghana)</option>
+                                        <option value="Wa(Ghana">Wa(Ghana)</option>
                                     </select></p>
-                                </div>
+                                    </div>
                                 <div class="input-booking-content">
-                                    <p class="text-booking-content">Time</br>
-                                    <input type="time" name="">
+                                <p class="text-booking-content">Time</br>
+                                <input type="time" name="time">
                                 </div>
                             </div> 
                             <div class="flex-booking-content flex-booking-margin">
                                 <div class="select-booking-content">
                                     <p class="text-booking-content">No. of Passenger<br>
-                                    <select id="box4">
+                                    <form action="booking.php" method="POST">
+                                    <select name="passengers">
                                         <option>  </option>
-                                        <option>25</option>
-                                        <option>32</option>
-                                        <option>45</option>
-                                        <option>65</option>
-                                        <option>72</option>
+                                        <option  value="25">25</option>
+                                        <option  value="32">32</option>
+                                        <option  value="45">45</option>
+                                        <option  value="65">65</option>
+                                        <option  value="72">72</option>
                                     </select></p>
-                                </div>
+                                    </div>
                                 <div class="select-booking-content select-booking-space">
                                     <p class="text-booking-content">Ticket type</p>
-                                    <select id="box5">
+                                    <select id="box5" name="ticket_type">
                                         <option>  </option>
-                                        <option>One-way Trip</option>
-                                        <option>Round Trip</option>
+                                        <option value="One-way Trip">One-way Trip</option>
+                                        <option value="Round Trip">Round Trip</option>
                                     </select>
-                                </div>
+                                    </div>
                                 <div class="input-booking-content">
                                     <p class="text-booking-content">Date</p>
-                                    <input type="date" name="">
-                                </div>
+                                    <input type="date" name="date">
+                                    </div>
                             </div>
                             <div class="booking-button-content">
-                                <button><a href="booking_detail.html">Booking</a></button>
+                                <button input type="submit" name="submit" value="Book"><a href="booking_detail.html">Book</a></button>
                             </div>
+                                </form>
                         </div>
                     </div>
                 </div>    
@@ -167,5 +170,25 @@
 				</div>
             </footer>
         </section> 
+        <?php
+            if(isset($_POST['submit'])) {
+                $location = $_POST['location'];
+                $destination = $_POST['destination'];
+                $time = $_POST['time'];
+                $passengers = $_POST['passengers'];
+                $ticket_type = $_POST['ticket_type'];
+                $date = $_POST['date'];
+                
+                $query = "INSERT INTO bookings (location, destination, time, passengers, ticket_type, date) 
+                
+                              VALUES ('$location', '$destination', '$time', '$passengers', '$ticket_type', '$date')";
+              
+                if ($conn->query($query) === TRUE) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: ". $query. "<br>". $conn->error;
+                }
+            }
+       ?>
     </body>
 </html>

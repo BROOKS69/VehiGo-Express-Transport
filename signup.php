@@ -92,7 +92,7 @@
                     <p><button type="submit"><a href="registration.html">Register</button></p>
                 </form>
                 <br><p> </p>
-                <p class="rtmreg_link">Already have an account? <a href="login.html">Login</a></p>  
+                <p class="rtmreg_link">Already have an account? <a href="login.php">Login</a></p>  
             </div>   
         </div>
     </section> 

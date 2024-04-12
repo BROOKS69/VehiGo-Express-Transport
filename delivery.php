@@ -1,7 +1,8 @@
 <?php
                  session_start();
                  
-               
+               // interaction with the database connection
+        require('./private/dbconnect/dbconnect.php');
              
                 // if (!isset($_SESSION['valid'])) {
                 //     # code...
@@ -43,7 +44,7 @@
                 <div class="booking_b-content-fl">
                     <div class="booking_b-content-flex">
                         <p class="booking_b-content-text">Courier Details</p>
-                        <form method = "POST">
+                        <form action="delivery.php" method="POST">
                             <p><input type="text" name="couriername" placeholder="Courier name" required></p>
                             <p><input type="number" name="contact" placeholder="Phone" required></p>
                             <p><input type="email" name="email3" placeholder="Email" required></p>
@@ -55,7 +56,7 @@
                     </div>
                     <div class="booking_b-content-flex">
                         <p class="booking_b-content-text">Recipient Details</p>
-                        <form method = "POST">
+                        <form action="delivery.php" method="POST">
                             <p><input type="text" name="recievername" placeholder="Reciever name" required></p>
                             <p><input type="number" name="recievercontact" placeholder="Reciever contact" required></p>
                             <p><input type="text" name="itemname" placeholder="Package name" required></p>
@@ -64,7 +65,7 @@
                     </div>
                 </div>
                 <div class="booking_b-button">
-                    <button type="submit"><a href="delivery_successful.html">Sumbit To Be Delivered</a></button>
+                <button type="submit" name="submit" value="Submit"><a href="delivery_successful.html">Submit Detials</a> </button>
                 </div>
             </div>
             
@@ -93,40 +94,41 @@
             </footer>
         </section>
         
-        <?php
-         // interaction with the database connection
-        require('./private/dbconnect/dbconnect.php');
+<?php
+        if(isset($_POST['submit'])) {
+            if(isset($_POST['couriername'])) {
+                // Courier details form was submitted
+                $couriername = $_POST["couriername"];
+                $contact = $_POST["contact"];
+                $email3 = $_POST["email3"];
+                $courieradrs = $_POST["courieradrs"];
 
-        // handling the submission
-        if($_SERVER["REQUEST_METHOD"] == "POST")
-        {
-            $couriername = $_POST["couriername"];
-            $contact = $_POST["contact"];
-            $email3 = $_POST["email3"];
-            $courieradrs = $_POST["courieradrs"];
-            $recievername = $_POST["recievername"];
-            $recievercontact = $_POST["recievercontact"];
-            $itemname = $_POST["itemname"];
-            $recieveradrs = $_POST["recieveradrs"];
-           
-            $query = "INSERT INTO delivery (couriername, contact, email3,  courieradrs, recievername, recievercontact, itemname, reciever_adrs)
+                $query = "INSERT INTO delivery (couriername, contact, email3, courieradrs) 
+                VALUES ('$couriername', '$contact', '$email3', '$courieradrs')";
 
-                      VALUES ('$couriername', ' $contact', ' $email3', '$courieradrs', '$recievername', '$recievercontact', '$recievercontact', '$itemname', '$recieveradrs')";
+                if ($conn->query($query) === TRUE) {
+                    echo "Courier details submitted successfully";
+                } else {
+                    echo "Error: ". $query. "<br>". $conn->error;
+                }
+            } else if(isset($_POST['recievername'])) {
+                // Recipient details form was submitted
+                $recievername = $_POST["recievername"];
+                $recievercontact = $_POST["recievercontact"];
+                $itemname = $_POST["itemname"];
+                $recieveradrs = $_POST["recieveradrs"];
 
-            if($conn->query($query) === TRUE)
-            {
-                echo "Registration successful";
-            }          
-            else{
-                echo "Error: " . $query . "<br>" . $conn->error;
-            
+                $query = "INSERT INTO delivery (recievername, recievercontact, itemname, recieveradrs) 
+                VALUES ('$recievername', '$recievercontact', '$itemname', '$recieveradrs')";
+
+                if ($conn->query($query) === TRUE) {
+                    echo "Recipient details submitted successfully";
+                } else {
+                    echo "Error: ". $query. "<br>". $conn->error;
+                }
             }
-        }
-
-        // close the connection
-        $conn->close();
-
-        ?>
+         }
+?>
         
     </body>
 </html>

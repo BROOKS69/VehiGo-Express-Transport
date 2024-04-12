@@ -1,14 +1,6 @@
 <?php
     require('./private/dbconnect/dbconnect.php');
     
-    if(isset($_POST['submit'])){
-
-        session_destroy();
-        session_unset();
-        mysqli_close($conn);
-        header("Location: login.php");
-        exit;
-    }
 
     //interaction with the database connection
     session_start();
@@ -22,12 +14,7 @@
     $result = mysqli_query($conn, $query)  or die("Select Error");
     $row = mysqli_fetch_assoc($result);
 
-
     
-
-
-
-
 ?>
 
 
