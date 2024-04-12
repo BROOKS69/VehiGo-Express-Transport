@@ -55,19 +55,8 @@
         </section> 
 
         <?php
-        // Databae connection parameters
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "vehigo_express_bustransport";
-
-        // createing a connection
-        $conn = new mysqli($servername, $username, $password, $database);
-
-        // Check connection
-        if ($conn->connect_error){
-            die("Connection failed: " . $conn->connect_error);
-        }
+        // interaction with the database connection
+        require('./private/dbconnect/dbconnect.php');
 
         // handling the submission
         if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -80,7 +69,7 @@
            
             $query = "INSERT INTO membership (fullname, lastname, email2, number2, address2)
 
-                      VALUES ('$fullname', ' $lastname', ' $email2', '$number2', '$address2')";
+                      VALUES ('$fullname', '$lastname', '$email2', '$number2', '$address2')";
 
             if($conn->query($query) === TRUE)
             {

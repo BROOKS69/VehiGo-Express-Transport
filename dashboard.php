@@ -1,3 +1,36 @@
+<?php
+    require('./private/dbconnect/dbconnect.php');
+    
+    if(isset($_POST['submit'])){
+
+        session_destroy();
+        session_unset();
+        mysqli_close($conn);
+        header("Location: login.php");
+        exit;
+    }
+
+    //interaction with the database connection
+    session_start();
+    if (!isset($_SESSION['email1'])) {
+        # code...
+        header("Location: login.php");
+    }
+   
+    $email = ' '. $_SESSION['email1'];
+    $query = "SELECT fullname, lastname, email1, number1, address1 FROM `sign_up` WHERE email1='$email' ";
+    $result = mysqli_query($conn, $query)  or die("Select Error");
+    $row = mysqli_fetch_assoc($result);
+
+
+    
+
+
+
+
+?>
+
+
 <!DOCTYPE Html>
 <html>
     <head>
@@ -50,12 +83,15 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 11V0.5H9.75V11H8.25Z" fill="#8D006E"/>
                             </svg>                            
                         </p>
-                        <p class="dashboard-rider-detail-flex-text"><a href="index.php">LOGOUT</a></p>
+                        <form action="dashboard" method="POST">
+                            <input  class="dashboard-rider-detail-flex-text" type="submit" value="LOGOUT" name="logout">
+                            <!-- <p><a href="index.php">LOGOUT</a></p> -->
+                        </form>
                     </div>
                 </div>
                 <div class="dashboard-ride-profile">
                     <div class="dashboard-ride-profile-links">
-                        <p><a href="dashboard.html">Profile</a></p>
+                        <p><a href="dashboard.php">Profile</a></p>
                         <hr>
                         <br> 
                         <p><a href="route.html">Route</a></p>
@@ -66,21 +102,20 @@
                         
                     </div>
                     <div class="dashboard-ride-profile-name">
-                        <p class="dashboard-ride-profile-name-text">Full Name:  </p>
-                        <p id="fullname-display"> <!-- User's full name will be inserted via JavaScript --> </p>
+                        <p class="dashboard-ride-profile-name-text">Full Name: <?=$row["fullname"] ?> </p>
+                        <p id="fullname-display"> <!-- User's full name will be inserted after login --> </p>
 
-                        <p class="dashboard-ride-profile-name-text">Last Name: </p>
-                        <p id="lastname-display"> <!-- User's last name will be inserted via JavaScript --> </p>
+                        <p class="dashboard-ride-profile-name-text">Last Name: <?=$row["lastname"] ?></p>
+                        <p id="lastname-display"> <!-- User's last name will be inserted after login--> </p>
 
-                        <p class="dashboard-ride-profile-name-text">Email: </p>
-                        <p id="email1-display"> <!-- User's email will be inserted via JavaScript --> </p>
+                        <p class="dashboard-ride-profile-name-text">Email: <?=$row["email1"] ?></p>
+                        <p id="email1-display"> <!-- User's email will be inserted after login --> </p>
 
-                        <p class="dashboard-ride-profile-name-text">Phone Number: </p>
-                        <p id="number1-display"> <!-- User's phone number will be inserted via JavaScript --> </p>
+                        <p class="dashboard-ride-profile-name-text">Phone Number: <?=$row["number1"] ?></p>
+                        <p id="number1-display"> <!-- User's phone number will be inserted after login --> </p>
 
-                        <p class="dashboard-ride-profile-name-text">Address: </p>
-                        <p id="address1-display"> <!-- User's address will be inserted via JavaScript --> </p>
-
+                        <p class="dashboard-ride-profile-name-text">Address: <?=$row["address1"]?></p>
+                        <p id="address1-display"> <!-- User's address will be inserted after login --> </p>
 
                        <!-- <p class="dashboard-ride-profile-name-text">First Name: </p>
                         <p>Last Name: <span></span></p>
@@ -90,11 +125,7 @@
                     </div>
                 </div>
             </div>
-            <script>
-                // Get the user input saved in the database or session
-                // and insert it into the corresponding placeholders
-            </script>
-
+            
             <footer class="footer-booking">
                 <div class="bottom-footera">
 					<span><svg width="23" height="23" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,3 +152,4 @@
         </section> 
     </body>
 </html>
+

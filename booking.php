@@ -1,27 +1,13 @@
 <?php
-                 session_start();
-                // Database connection parameters
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "vehigo_express_bustransport";
+    session_start();
+    require('./private/dbconnect/dbconnect.php');
 
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
+    // interaction with the database connection
+    if (!isset($_SESSION['Valid'])) {
 
-                // Check connection
-                if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-                }
-
-                // interaction with the database connection
-                if (!isset($_SESSION['valid'])) {
-                    # code....
-                  header("Location: login.php");
-                }
-        
-               
-            ?>
+        header("Location: login.php");
+    }  
+?>
 
 <!DOCTYPE Html>
 <html>

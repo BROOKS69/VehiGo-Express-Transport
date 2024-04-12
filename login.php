@@ -1,26 +1,11 @@
 <?php
-                // Database connection parameters
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "vehigo_express_bustransport";
+   require('./private/dbconnect/dbconnect.php');
+    // // interaction with the database connection
+    session_start();
 
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                // Check connection
-                if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-                }
-
-                // // interaction with the database connection
-                // session_start();
-                // if (!isset($_SESSION['valid'])) {
-                //     # code...
-                //     header("Location: login.php");
-                //  }
-               
-            ?>
+   
+    
+?>
 
     <head>
         <meta charset="UTF-8">
@@ -41,24 +26,25 @@
             $email1 = mysqli_real_escape_string($conn,$_POST['email1']);
             $password = mysqli_real_escape_string($conn, md5($_POST['password'])); // Hashes the password
 
-           $result = mysqli_query($conn, "SELECT * FROM sign_up WHERE Email='$email1' AND Password = '$password'")
+           $result = mysqli_query($conn, "SELECT * FROM sign_up WHERE email1=' $email1' AND Password = '$password'")
            or die("Select Error");
            $row = mysqli_fetch_assoc($result);
-
+            
            if (is_array($row) && !empty($row)) {
-            if (isset($row['Email'])) {
-                $_SESSION['Valid'] = $row['Email'];
+            if (isset($row['email1'])) {
+                $_SESSION['email1'] = $row['email1'];
             }
             if (isset($row['Id'])) {
                 $_SESSION['id'] = $row['Id'];
             }
            }
             if($result)
-            {
+            {   
                 $_SESSION['Valid'] = true;
-                header("Location: booking.php");
-                header("Location: delivery.php");
-                // echo "Registration successful";
+                $_SESSION['email1'] = $email1;
+                // // header("Location: booking.php");
+                 header("Location: index.php");
+                // // echo "Registration successful";
             }          
             else{
                 echo "Error: " . $query . "<br>" . $conn->error;
@@ -96,7 +82,7 @@
                 </div>
                 <div class="form_input">
                     <form action="login.php" method="POST">
-                        <p><input type="email" name="email" id="email" placeholder="Email/Username" required></p>
+                        <p><input type="email1" name="email1" id="email" placeholder="Email/Username" required></p>
                         <p><input type="password" name="password" placeholder="Password" required></p>
                         <p><button type="submit" <a href="booking.php"</a>Login</button></p>
                         <div class= "rtmslogin_footer_or">

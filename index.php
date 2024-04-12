@@ -1,27 +1,15 @@
 <?php
-                // Database connection parameters
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "vehigo_express_bustransport";
+        require('./private/dbconnect/dbconnect.php');
 
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
+    //interaction with the database connection
+    session_start();
+    if (!isset($_SESSION['Valid'])) {
+        # code...
+        header("Location: login.php");
+        }
 
-                // Check connection
-                if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-                }
-
-                //interaction with the database connection
-                // session_start();
-                // if (!isset($_SESSION['valid'])) {
-                //     # code...
-                //     header("Location: login.php");
-                //  }
-        
-               
-            ?>
+    
+?>
 
 
     <head>
@@ -66,7 +54,7 @@
                                     </div>
                                   </div>
                                 </li>
-                                <li><a href="dashboard.html">DASHBOARD</a></li>
+                                <li><a href="dashboard.php">DASHBOARD</a></li>
                                 <li><a href="about.html">ABOUT</a></li>
                                 
                                 <li>
