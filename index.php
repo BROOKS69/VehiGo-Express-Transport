@@ -3,10 +3,10 @@
 
     //interaction with the database connection
     session_start();
-    if (!isset($_SESSION['Valid'])) {
-        # code...
-        header("Location: login.php");
-        }
+    // if (!isset($_SESSION['Valid'])) {
+    //     # code...
+    //     header("Location: login.php");
+    //     }
 
     
 ?>
