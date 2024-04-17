@@ -4,10 +4,10 @@
                // interaction with the database connection
         require('./private/dbconnect/dbconnect.php');
              
-                // if (!isset($_SESSION['valid'])) {
-                //     # code...
-                //   header("Location: login.php");
-                // }
+                if (!isset($_SESSION['Valid'])) {
+                    # code...
+                  header("Location: login.php");
+                }
         
                
             ?>
