@@ -2,6 +2,7 @@
    require('./private/dbconnect/dbconnect.php');
     // // interaction with the database connection
     session_start();
+    
 
    
     
@@ -42,9 +43,9 @@
             {   
                 $_SESSION['Valid'] = true;
                 $_SESSION['email1'] = $email1;
-                // // header("Location: booking.php");
-                 header("Location: index.php");
-                // // echo "Registration successful";
+                // header("Location: booking.php");
+                  header("Location: index.php");
+                // echo "Registration successful";
             }          
             else{
                 echo "Error: " . $query . "<br>" . $conn->error;
