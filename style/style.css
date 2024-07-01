@@ -1,7 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat';
+	font-family:'Times New Roman', Times, serif;
+	font-weight: bold;
 }
 /* @media screen and (max-width: 600px) {
 	body{
@@ -108,10 +109,11 @@ body {
 	border: 1px solid #f56cf5;
 	border-radius: 64px;
 	font-weight: 500;
+	transition: 3s ease;
 }
 
 .login_nav_link:hover {
-	background-color: rgb(241, 58, 217);
+	background-color: rgb(245, 4, 213);
 }
 
 .dropbtn {
@@ -123,11 +125,13 @@ body {
 	line-height: 39px;
 	letter-spacing: 0em;
 	border: none;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 .dropdown {
 	position: relative;
-	display: inline;
+	display: inline-block;
 }
 
 .dropdown-content {
@@ -145,6 +149,23 @@ body {
 	text-decoration: none;
 	display: block;
 }
+
+.dropdown-content li {
+	list-style-type: none;
+	margin: 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content li a {
+	text-decoration: none;
+	color: #333;
+}
+  
+.dropdown-content li:hover {
+	background-color: #f1f1f1;
+}
+  
+  
 
 .dropdown-content a:hover {
 	background-color: #8D006E;
@@ -170,13 +191,24 @@ body {
 	font-weight: 400;
 	line-height: 115px;
 	letter-spacing: 0em;
+	transition: 3s ease;
 }
+
+.ttms_body_text:hover {
+	color: #8a0d6f;
+}
+
 .ttms_body span {
 	color:#8D006E;
+	transition: 3s ease;
+}
+
+.ttms_body span:hover {
+	color: rgb(0, 0, 0);
 }
 
 .ttms_body_img{
-	background-color:transparent;
+	background-color: transparent;
 	margin-right: 100px;
 	background-image: url(../assess/bus2-removebg-preview.png);
 	background-repeat: no-repeat;

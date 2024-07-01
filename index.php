@@ -11,7 +11,6 @@
     
 ?>
 
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,32 +40,31 @@
                         </div>
                         <div class="ttms_header_nav">
                             <ul>                                
-                                <li><a href="index.php">HOME</a></li>                                
-                                <li>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">SERVICES</button>
-                                    <div class="dropdown-content">
-                                      <a href="membership.php">Membership</a>
-                                      <a href="booking.php">Booking</a>
-                                      <a href="delivery.php">Delivery</a>
-                                      <a href="agent.html">Agents</a>
-                                      <a href="review.php">Reviews</a>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li><a href="dashboard.php">DASHBOARD</a></li>
-                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="index.php">HOME</a></li>  
+                                <li><a href="dashboard.php">DASHBOARD</a></li>                              
+                                    <li>
+                                        <div class="dropdown">
+                                            <button class="dropbtn">SERVICES</button>
+                                            <div class="dropdown-content">
+                                            <a href="membership.php">Membership</a>
+                                            <a href="booking.php">Booking</a>
+                                            <a href="delivery.php">Delivery</a>
+                                            <a href="agent.html">Agents</a>
+                                            <a href="review.php">Reviews</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="about.html">ABOUT</a></li>
                                 
-                                <li>
+                                <!-- <li>
                                 <span class="login_nav_link">
                                     <div class="dropdown">
                                         <button class="dropbtn">LOGIN</button>
                                     <div class="dropdown-content">
                                         <a href="login.php">Login</a>
                                       <a href="signup.php">New User</a>
-                                      <!--<a href="login.html">Agent</a>-->
                                 </span>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>   
