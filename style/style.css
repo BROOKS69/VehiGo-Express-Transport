@@ -217,6 +217,145 @@ body {
 	width: 850px;
 }
 
+
+/*Dashboard */
+.dashboard {
+	background-color: rgba(255, 255, 255, 1);
+	padding-bottom: 20px;
+}
+
+.dashboard-text {
+	background-color: rgba(217, 217, 217, 0.08);
+	padding: 10px 24px;
+
+}
+
+.dashboard-text p {
+	background: linear-gradient(90deg, #7D0362 13.44%, #FF03C8 129.03%);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	font-size: 32px;
+	font-weight: 600;
+	letter-spacing: 0em;  
+}
+
+.dashboard-text hr {
+	background: linear-gradient(90deg, #8D006E 0%, #FF00C7 73.89%);
+	width: 90px;
+	height: 5px;
+	border: none;
+	border-radius: 10px;
+}
+
+.dashboard-rider-detail {
+	margin: 22px 0px;
+	padding: 0px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: rgba(141, 0, 110, 1);
+}
+
+.dashboard-rider-detail-flex {
+	display: flex;
+	align-items: center;
+}
+
+.dashboard-rider-detail-flex img {
+	background-image: url(../assess/buslogo.png);
+	height: 65px;
+	width: 65px;
+	margin-right: 0px;
+	border-radius: 100%;
+	border: 5px solid whitesmoke;
+}
+
+.dashboard-rider-detail-flex-text {
+	font-size: 18;
+	line-height: 26px;
+	font-weight: 400px;
+	letter-spacing: 0em;
+	font-size: 18px;
+}
+
+.dashboard-rider-detail-flex-text a{
+	text-decoration: none;
+	color: #7a1e66;
+	transition: 2s ease;
+}
+
+.dashboard-rider-detail-flex-text a:hover {
+	color: #f30404;
+}
+
+.dashboard-rider-detail-flex-text span {
+	font-weight: 500px;
+}
+
+.dashboard-ride-date {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 31px;
+	letter-spacing: 0em;
+}
+
+.dashboard-logo-logout {
+	margin-right: 10px;
+}
+
+
+.dashboard-ride-profile {
+	background-color: rgba(217, 217, 217, 0.08);
+	padding: 12px 24px;
+	display: flex;
+	border-bottom: 0.5px solid rgba(141, 0, 110, 0.24);
+}
+
+.dashboard-ride-profile-links p {
+	padding: 9px 0px 23px 0px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 31px;
+	letter-spacing: 0em;
+}
+
+.dashboard-ride-profile-links a {
+	text-decoration: none;
+	color: rgba(141, 0, 110, 1);
+}
+
+.dashboard-ride-profile-links a:hover {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 31px;
+	letter-spacing: 0em;
+}
+
+.dashboard-ride-profile-links hr {
+	background-color: rgba(141, 0, 110, 0.24);
+	height: 0.5px;
+	border: none;
+}
+
+.dashboard-ride-profile-name {
+	margin-left: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: rgba(141, 0, 110, 1);
+	letter-spacing: 0em;
+	border-left: 0.5px solid rgba(141, 0, 110, 0.24);
+}
+
+.dashboard-ride-profile-name p {
+	padding: 0px 0px 15px 26px;
+}
+
+.dashboard-ride-profile-name-text {
+	margin-top: 16px;
+}
+
+
 /*about us*/
 .container_a {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.346), #0000007a), url(../assess/road.avif);
@@ -631,6 +770,10 @@ body {
 	height: 457px;
 }
 
+.rtmreg-section-form button {
+	margin-top: 30px;
+}
+
 .rtmreg-section-b input{
 	background-color: transparent;
 	width: 575px;
@@ -841,13 +984,19 @@ body {
 	color: rgba(255, 255, 255, 1);
 	line-height: 39px;
 	letter-spacing: 0em;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	
 }
+
 
 .footer-icona {
 	/*margin-top: 10px;
 	padding: 30px 25px 30px 0px;*/
 	margin-right: 33px;
-	display: flex
+	display: flex;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 .error_header-text {
@@ -860,7 +1009,7 @@ body {
 	text-align: center;
 }
 
-/*booking_paydetial page*/
+/*booking_pay_details page*/
 .booking_a-content {
 	background-color: rgba(255, 255, 255, 1);
 	width: 100%;
@@ -965,6 +1114,15 @@ body {
 	margin-right: 5px;
 	color: rgba(255, 255, 255, 1);
 	border: none;
+	font-weight: bold;
+	/* transition: 2.2s ease-in-out; */
+	z-index: 0;
+}
+
+.button-book:hover {
+	border: 1px solid #8D006E;
+	color: #7D0362;
+	background: white;
 }
 
 .button-cancel {
@@ -972,9 +1130,17 @@ body {
 	margin-left: 5px;
 	color: rgba(141, 0, 110, 1);
 	border: 1px solid #8D006E;
+	font-weight: bold;
+	z-index: 0;
 }
 
-/*booking_detial page*/
+.button-cancel:hover {
+	border: 1px solid #f5f2f4;
+	color: #ffffff;
+	background: #8a0d6f;
+}
+
+/* booking_detail page
 .booking_b-content {
 	background-color: rgba(255, 255, 255, 1);
 	width: 100%;
@@ -1052,7 +1218,7 @@ body {
 .booking_b-button a {
 	text-decoration: none;
 	color: whitesmoke;
-}
+} */
 
 /*booking_pay page*/
 .booking_c {
@@ -1183,7 +1349,8 @@ body {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 21px;
-	letter-spacing: 0.01em;	text-align: center;
+	letter-spacing: 0.01em;	
+	text-align: center;
 }
 
 .booking_a-content-groupa {
@@ -1192,6 +1359,8 @@ body {
 	line-height: 21px;
 	letter-spacing: 0.01em;
 }
+
+
 
 /*successful page*/
 .ttms-registrationa {
@@ -1221,32 +1390,85 @@ body {
 }
 
 /*delivery_successful page*/
-.ttms-registration {
+.booking_b-content {
+	background-color: rgba(255, 255, 255, 1);
+	width: 100%;
+	max-width: 1239px;
+	margin: 0px auto;
+	border-radius: 10px;
+}
+
+.booking_b-content-fl {
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.booking_b-content-flex {
 	text-align: center;
 }
 
-.ttms-registrationa img {
-	height: 300px;
-	width: 300px;
-}
-
-.ttms-registrationa button {
-	background-color: linear-gradient(180deg, #B10AA7 -14.93%, #CA1CB5 13.65%, #E731C5 81.34%);
-	margin-top: 50px;
-	padding: 10px 62px;
+.booking_b-content-text {
+	background: linear-gradient(180deg, #B10AA7 -14.93%, #CA1CB5 13.65%, #E731C5 81.34%);
+	width: 517px;
+	padding: 8px 0px;
 	font-size: 18px;
 	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
 	line-height: 32px;
-	color: rgb(255, 255, 255);
 	letter-spacing: -0.01em;
+}
+
+.booking_b-content-flex input {
+	width: 517px;
+	padding: 15px 0px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 29px;
+	letter-spacing: 0em;
+	text-align: center;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 0.5px solid #673B99;
+}
+
+.booking_b-divider {
+	background-color: #673B99;
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+/* .booking_b-divider img{
+	height: 300px;
+} */
+
+.booking_b-button {
+	padding: 16px 0px;
+	text-align: center;
+}
+
+.booking_b-button button {
+	background: linear-gradient(90deg, #673B99 13.34%, #E731C5 93.54%);
+	padding: 7px 312px;
+	font-size: 19px;
+	font-weight: 500;
+	line-height: 29px;
+	color: rgba(255, 255, 255, 1);
+	letter-spacing: -0.01em;
+	text-align: center;
 	border: none;
 	border-radius: 8px;
 }
 
-.ttms-registrationa a{
-	background-color: whitesmoke;
+.booking_b-button a {
 	text-decoration: none;
-}
+	color: whitesmoke;
+} 
+
 
 
 /*Agents page */
@@ -1371,136 +1593,7 @@ body {
 	border-radius: 8px;
 }
 
-/*Dashboard */
-.dashboard {
-	background-color: rgba(255, 255, 255, 1);
-	padding-bottom: 20px;
-}
 
-.dashboard-text {
-	background-color: rgba(217, 217, 217, 0.08);
-	padding: 10px 24px;
-
-}
-
-.dashboard-text p {
-	background: linear-gradient(90deg, #7D0362 13.44%, #FF03C8 129.03%);
-	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-	font-size: 32px;
-	font-weight: 600;
-	letter-spacing: 0em;  
-}
-
-.dashboard-text hr {
-	background: linear-gradient(90deg, #8D006E 0%, #FF00C7 73.89%);
-	width: 90px;
-	height: 5px;
-	border: none;
-	border-radius: 10px;
-}
-
-.dashboard-rider-detail {
-	margin: 22px 0px;
-	padding: 0px 24px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	color: rgba(141, 0, 110, 1);
-}
-
-.dashboard-rider-detail-flex {
-	display: flex;
-	align-items: center;
-}
-
-.dashboard-rider-detail-flex img {
-	background-image: url(../assess/buslogo.png);
-	height: 65px;
-	width: 65px;
-	margin-right: 0px;
-	border-radius: 100%;
-	border: 5px solid whitesmoke;
-}
-
-.dashboard-rider-detail-flex-text {
-	font-size: 18;
-	line-height: 26px;
-	font-weight: 400;
-	letter-spacing: 0em;
-	font-size: 18px;
-}
-
-.dashboard-rider-detail-flex-text a{
-	text-decoration: none;
-	color: #7a1e66;
-}
-
-.dashboard-rider-detail-flex-text span {
-	font-weight: 500;
-}
-
-.dashboard-ride-date {
-	font-size: 18px;
-	font-weight: 300;
-	line-height: 31px;
-	letter-spacing: 0em;
-}
-
-.dashboard-logo-logout {
-	margin-right: 10px;
-}
-
-.dashboard-ride-profile {
-	background-color: rgba(217, 217, 217, 0.08);
-	padding: 12px 24px;
-	display: flex;
-	border-bottom: 0.5px solid rgba(141, 0, 110, 0.24);
-}
-
-.dashboard-ride-profile-links p {
-	padding: 9px 0px 23px 0px;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 31px;
-	letter-spacing: 0em;
-}
-
-.dashboard-ride-profile-links a {
-	text-decoration: none;
-	color: rgba(141, 0, 110, 1);
-}
-
-.dashboard-ride-profile-links a:hover {
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 31px;
-	letter-spacing: 0em;
-}
-
-.dashboard-ride-profile-links hr {
-	background-color: rgba(141, 0, 110, 0.24);
-	height: 0.5px;
-	border: none;
-}
-
-.dashboard-ride-profile-name {
-	margin-left: 20px;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 20px;
-	color: rgba(141, 0, 110, 1);
-	letter-spacing: 0em;
-	border-left: 0.5px solid rgba(141, 0, 110, 0.24);
-}
-
-.dashboard-ride-profile-name p {
-	padding: 0px 0px 15px 26px;
-}
-
-.dashboard-ride-profile-name-text {
-	margin-top: 16px;
-}
 
 /* Route page */
 .route-ride-profile-name {

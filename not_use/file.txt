@@ -1,0 +1,14 @@
+ <!-- <div class="booking_b-divider">
+                        <img src="./assess/Line 5.png" alt="divider">
+                    </div> -->
+
+
+                    <!-- <div class="booking_b-content-flex">
+                        <p class="booking_b-content-text">Recipient Details</p>
+                        <form action="delivery.php" method="POST">
+                            <p><input type="text" name="recievername" placeholder="Receiver name" required></p>
+                            <p><input type="number" name="recievercontact" placeholder="Receiver contact" required></p>
+                            <p><input type="text" name="itemname" placeholder="Package name" required></p>
+                            <p><input type="text" name="recieveradrs" placeholder="Receiver address" required></p>
+                        </form> 
+                    </div> -->

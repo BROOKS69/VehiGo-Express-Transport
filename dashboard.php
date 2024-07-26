@@ -6,12 +6,12 @@
     session_start();
     if (!isset($_SESSION['email1'])) {
         # code...
-        header("Location: login.php");
+        // header("Location: login.php");
     }
    
     $email = ' '. $_SESSION['email1'];
     $query = "SELECT fullname, lastname, email1, number1, address1 FROM `sign_up` WHERE email1='$email' ";
-    $result = mysqli_query($conn, $query)  or die("Select Error");
+    $result = mysqli_query($conn, $query)  or die ("Select Error");
     $row = mysqli_fetch_assoc($result);
 
     
@@ -49,7 +49,7 @@
                             <a href="index.php"><img src="./assess/sid-divider.png" alt="sid-divider"></a>
                         </div>
                         <div class="ttms_header_text">
-                            <a href="index.php"><span class="ttms-logo-ride">VehiGo Express, GHANA</span><br>BUS TRANSPORT<br>MANAGEMENET<br>SYSTEM</span></a>
+                            <a href="index.php"><span class="ttms-logo-ride">VehiGo Express, GHANA</span><br>BUS TRANSPORT<br>MANAGEMENT<br>SYSTEM</span></a>
                         </div>
                 </div>   
             </div>
@@ -65,14 +65,17 @@
                     </div>
                     <p class="dashboard-ride-date">1st May, 2024</p>
                     <div class="dashboard-rider-detail-flex">
-                        <p class="dashboard-logo-logout"><svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36828 5.65625C3.91888 6.45882 2.77602 7.71871 2.11811 9.23924C1.46021 10.7598 1.32429 12.4554 1.73158 14.0613C2.13886 15.6672 3.06643 17.0931 4.36947 18.1163C5.67251 19.1395 7.27768 19.7024 8.93437 19.7172C10.5911 19.732 12.206 19.1979 13.5272 18.1981C14.8483 17.1984 15.8012 15.7893 16.2371 14.1909C16.6731 12.5926 16.5675 10.8948 15.9369 9.36278C15.3062 7.83073 14.1861 6.5506 12.7513 5.72225L13.5013 4.42325C15.2228 5.41753 16.5666 6.95381 17.323 8.79227C18.0795 10.6307 18.2059 12.6679 17.6826 14.5858C17.1593 16.5037 16.0157 18.1943 14.4304 19.3938C12.8451 20.5934 10.9072 21.2342 8.91927 21.2164C6.93136 21.1986 5.00528 20.523 3.44172 19.2953C1.87816 18.0675 0.7651 16.3566 0.276297 14.4296C-0.212507 12.5027 -0.0495449 10.4681 0.739743 8.6435C1.52903 6.81891 2.90022 5.30698 4.63928 4.34375L5.36828 5.65625Z" fill="#8D006E"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 11V0.5H9.75V11H8.25Z" fill="#8D006E"/>
+                        <p class="dashboard-logo-logout">
+                            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36828 5.65625C3.91888 6.45882 2.77602 7.71871 2.11811 9.23924C1.46021 10.7598 1.32429 12.4554 1.73158 14.0613C2.13886 15.6672 3.06643 17.0931 4.36947 18.1163C5.67251 19.1395 7.27768 19.7024 8.93437 19.7172C10.5911 19.732 12.206 19.1979 13.5272 18.1981C14.8483 17.1984
+                                15.8012 15.7893 16.2371 14.1909C16.6731 12.5926 16.5675 10.8948 15.9369 9.36278C15.3062 7.83073 14.1861 6.5506 12.7513 5.72225L13.5013 4.42325C15.2228 5.41753 16.5666 6.95381 17.323 8.79227C18.0795 10.6307 18.2059 12.6679 17.6826 14.5858C17.1593 16.5037 16.0157 18.1943 14.4304 19.3938C12.8451 20.5934 10.9072 21.2342 
+                                8.91927 21.2164C6.93136 21.1986 5.00528 20.523 3.44172 19.2953C1.87816 18.0675 0.7651 16.3566 0.276297 14.4296C-0.212507 12.5027 -0.0495449 10.4681 0.739743 8.6435C1.52903 6.81891 2.90022 5.30698 4.63928 4.34375L5.36828 5.65625Z" fill="#8D006E"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 11V0.5H9.75V11H8.25Z" fill="#8D006E"/>
                             </svg>                            
                         </p>
                         <form action="dashboard" method="POST">
-                            <input  class="dashboard-rider-detail-flex-text" type="submit" value="LOGOUT" name="logout">
-                            <!-- <p><a href="index.php">LOGOUT</a></p> -->
+                            <!-- <input  class="dashboard-rider-detail-flex-text" type="submit" value="LOGOUT" name="logout"> -->
+                            <p class="dashboard-rider-detail-flex-text"><a href="index.php">LOGOUT</a></p>
                         </form>
                     </div>
                 </div>
@@ -84,8 +87,7 @@
                         <p><a href="route.html">Route</a></p>
                         <hr>
                         <br>
-                        <br>
-                        <p><a href="#">Package Detial</a></p>
+                        <p><a href="#">Delivery Detail</a></p>
                         
                     </div>
                     <div class="dashboard-ride-profile-name">

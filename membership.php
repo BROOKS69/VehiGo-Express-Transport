@@ -34,7 +34,7 @@
                         </p>
                         <p class="rtmreg_texta">Join Us</p>
                         <p class="rtmreg_textb">Register to join our community <br>of dispatchers</p>
-                        <p><button><a href="about.html">About Us </a></button></p>
+                        <a href="about.html"><button>About Us</button></a>
                     </div>
                     <div class="rtmreg_button">
                         
@@ -48,7 +48,7 @@
                         <p><input type="number" name="number2" placeholder="Phone Number" required></p>
                         <p><input type="address" name="address2" placeholder="Address" required></p>
                         
-                        <p><button type="submit"><a href="registration.html">Register</a></button></p>
+                        <a href="registration.html"><button type="submit">Register</button></a>
                     </form>
                 </div>   
             </div>
