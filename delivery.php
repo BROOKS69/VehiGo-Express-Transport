@@ -44,9 +44,11 @@
                     <div class="booking_b-content-flex">
                         <p class="booking_b-content-text">Delivery Details</p>
                         <form action="delivery.php" method="POST">
+                            <!-- Customer or User Details -->
                             <p><input type="text" name="couriername" placeholder="Courier name" required></p>
                             <p><input type="number" name="contact" placeholder="Phone" required></p>
                             <p><input type="text" name="courieradrs" placeholder="Courier address" required></p>
+                            <!-- Receiver Details -->
                             <p><input type="text" name="recievername" placeholder="Receiver name" required></p>
                             <p><input type="number" name="recievercontact" placeholder="Receiver contact" required></p>
                             <p><input type="text" name="itemname" placeholder="Package name" required></p>
@@ -129,41 +131,7 @@
             </footer>
         </section>
         
-<?php
-        // if(isset($_POST['submit'])) {
-        //     if(isset($_POST['couriername'])) {
-        //         // Courier details form was submitted
-        //         $couriername = $_POST["couriername"];
-        //         $contact = $_POST["contact"];
-        //         $email3 = $_POST["email3"];
-        //         $courieradrs = $_POST["courieradrs"];
 
-        //         $query = "INSERT INTO delivery (couriername, contact, email3, courieradrs) 
-        //         VALUES ('$couriername', '$contact', '$email3', '$courieradrs')";
-
-        //         if ($conn->query($query) === TRUE) {
-        //             echo "Courier details submitted successfully";
-        //         } else {
-        //             echo "Error: ". $query. "<br>". $conn->error;
-        //         }
-        //     } else if(isset($_POST['recievername'])) {
-        //         // Recipient details form was submitted
-        //         $recievername = $_POST["recievername"];
-        //         $recievercontact = $_POST["recievercontact"];
-        //         $itemname = $_POST["itemname"];
-        //         $recieveradrs = $_POST["recieveradrs"];
-
-        //         $query = "INSERT INTO delivery (recievername, recievercontact, itemname, recieveradrs) 
-        //         VALUES ('$recievername', '$recievercontact', '$itemname', '$recieveradrs')";
-
-        //         if ($conn->query($query) === TRUE) {
-        //             echo "Recipient details submitted successfully";
-        //         } else {
-        //             echo "Error: ". $query. "<br>". $conn->error;
-        //         }
-        //     }
-        //  }
-?>
         
     </body>
 </html>
